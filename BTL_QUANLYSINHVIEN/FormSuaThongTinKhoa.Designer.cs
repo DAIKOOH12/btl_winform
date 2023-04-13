@@ -61,7 +61,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(91, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 30);
+            this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Địa chỉ";
             // 
@@ -77,7 +77,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(91, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 30);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên khoa";
             // 

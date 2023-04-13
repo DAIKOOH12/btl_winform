@@ -107,11 +107,11 @@
             this.sMaKhoa,
             this.sTenKhoa,
             this.sDiaChi});
-            this.dgv_khoa.Location = new System.Drawing.Point(242, 278);
+            this.dgv_khoa.Location = new System.Drawing.Point(235, 278);
             this.dgv_khoa.Name = "dgv_khoa";
             this.dgv_khoa.RowHeadersWidth = 62;
             this.dgv_khoa.RowTemplate.Height = 28;
-            this.dgv_khoa.Size = new System.Drawing.Size(799, 221);
+            this.dgv_khoa.Size = new System.Drawing.Size(806, 300);
             this.dgv_khoa.TabIndex = 2;
             this.dgv_khoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_khoa_CellClick);
             // 

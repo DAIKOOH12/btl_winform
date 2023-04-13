@@ -24,7 +24,8 @@ namespace BTL_QUANLYSINHVIEN
 
         private void loadData()
         {
-            con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString; con.Open();
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString; 
+            con.Open();
             try
             {
                 string query_select = "Select * from tblKhoa";

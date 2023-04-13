@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.mns_main = new System.Windows.Forms.MenuStrip();
+            this.mns_trangchu = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsi_quanly = new System.Windows.Forms.ToolStripMenuItem();
             this.qli_khoa = new System.Windows.Forms.ToolStripMenuItem();
             this.qli_nganh = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,6 +61,7 @@
             this.mns_main.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mns_main.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mns_main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mns_trangchu,
             this.mnsi_quanly,
             this.mnsi_baocao});
             this.mns_main.Location = new System.Drawing.Point(0, 0);
@@ -67,6 +69,12 @@
             this.mns_main.Size = new System.Drawing.Size(1260, 33);
             this.mns_main.TabIndex = 0;
             this.mns_main.Text = "menuStrip1";
+            // 
+            // mns_trangchu
+            // 
+            this.mns_trangchu.Name = "mns_trangchu";
+            this.mns_trangchu.Size = new System.Drawing.Size(126, 29);
+            this.mns_trangchu.Text = "TRANG CHỦ";
             // 
             // mnsi_quanly
             // 
@@ -86,50 +94,51 @@
             // qli_khoa
             // 
             this.qli_khoa.Name = "qli_khoa";
-            this.qli_khoa.Size = new System.Drawing.Size(251, 34);
+            this.qli_khoa.Size = new System.Drawing.Size(270, 34);
             this.qli_khoa.Text = "Quản lý Khoa";
             this.qli_khoa.Click += new System.EventHandler(this.qli_khoa_Click);
             // 
             // qli_nganh
             // 
             this.qli_nganh.Name = "qli_nganh";
-            this.qli_nganh.Size = new System.Drawing.Size(251, 34);
+            this.qli_nganh.Size = new System.Drawing.Size(270, 34);
             this.qli_nganh.Text = "Quản lý Ngành";
+            this.qli_nganh.Click += new System.EventHandler(this.qli_nganh_Click);
             // 
             // qli_lop
             // 
             this.qli_lop.Name = "qli_lop";
-            this.qli_lop.Size = new System.Drawing.Size(251, 34);
+            this.qli_lop.Size = new System.Drawing.Size(270, 34);
             this.qli_lop.Text = "Quản lý Lớp";
             // 
             // qli_sinhvien
             // 
             this.qli_sinhvien.Name = "qli_sinhvien";
-            this.qli_sinhvien.Size = new System.Drawing.Size(251, 34);
+            this.qli_sinhvien.Size = new System.Drawing.Size(270, 34);
             this.qli_sinhvien.Text = "Quản lý Sinh viên";
             // 
             // qli_hoso
             // 
             this.qli_hoso.Name = "qli_hoso";
-            this.qli_hoso.Size = new System.Drawing.Size(251, 34);
+            this.qli_hoso.Size = new System.Drawing.Size(270, 34);
             this.qli_hoso.Text = "Quản lý Hồ sơ";
             // 
             // qli_hoadon
             // 
             this.qli_hoadon.Name = "qli_hoadon";
-            this.qli_hoadon.Size = new System.Drawing.Size(251, 34);
+            this.qli_hoadon.Size = new System.Drawing.Size(270, 34);
             this.qli_hoadon.Text = "Quản lý Hóa đơn";
             // 
             // qli_diem
             // 
             this.qli_diem.Name = "qli_diem";
-            this.qli_diem.Size = new System.Drawing.Size(251, 34);
+            this.qli_diem.Size = new System.Drawing.Size(270, 34);
             this.qli_diem.Text = "Quản lý Điểm";
             // 
             // qli_canbo
             // 
             this.qli_canbo.Name = "qli_canbo";
-            this.qli_canbo.Size = new System.Drawing.Size(251, 34);
+            this.qli_canbo.Size = new System.Drawing.Size(270, 34);
             this.qli_canbo.Text = "Quản lý Cán bộ";
             // 
             // mnsi_baocao
@@ -268,6 +277,7 @@
         private System.Windows.Forms.ToolStripMenuItem tke_canbo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem mns_trangchu;
     }
 }
 

@@ -59,11 +59,23 @@
     <Compile Include="FormQLKhoa.Designer.cs">
       <DependentUpon>FormQLKhoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQLyNganh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLyNganh.Designer.cs">
+      <DependentUpon>FormQLyNganh.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSuaThongTinKhoa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormSuaThongTinKhoa.Designer.cs">
       <DependentUpon>FormSuaThongTinKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuaThongTinNganh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuaThongTinNganh.Designer.cs">
+      <DependentUpon>FormSuaThongTinNganh.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +85,14 @@
     <EmbeddedResource Include="FormQLKhoa.resx">
       <DependentUpon>FormQLKhoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormQLyNganh.resx">
+      <DependentUpon>FormQLyNganh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSuaThongTinKhoa.resx">
       <DependentUpon>FormSuaThongTinKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaThongTinNganh.resx">
+      <DependentUpon>FormSuaThongTinNganh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
