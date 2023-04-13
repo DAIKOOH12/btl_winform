@@ -61,7 +61,8 @@ namespace BTL_QUANLYSINHVIEN
 
         private void tb_makhoa_TextChanged(object sender, EventArgs e)
         {
-            
+            errorProvider1.SetError(tb_makhoa, null);
+            errorProvider1.SetError(tb_tenkhoa, null);
         }
 
         private void tb_makhoa_Validating(object sender, CancelEventArgs e)
@@ -217,5 +218,6 @@ namespace BTL_QUANLYSINHVIEN
                 dgv_khoa.DataSource = dtv;
             }
         }
+        //Mai đã sửa chỗ này và thêm chức năng này
     }
 }
