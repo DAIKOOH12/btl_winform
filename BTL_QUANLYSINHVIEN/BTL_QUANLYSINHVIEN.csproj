@@ -150,5 +150,11 @@
   <ItemGroup>
     <None Include="Resources\306009830_1502899793474605_7946496520904862648_n.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scorpion-mortal-kombat-x-4K-wallpaper-pc-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mattroithieuruihanhtinhjpg1resize_6c46e.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

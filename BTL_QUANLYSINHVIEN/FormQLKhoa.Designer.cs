@@ -189,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 590);
+            this.ClientSize = new System.Drawing.Size(1239, 651);
             this.Controls.Add(this.btn_find);
             this.Controls.Add(this.btn_fix);
             this.Controls.Add(this.btn_xoa);
@@ -202,7 +202,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormQLKhoa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý Khoa";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormQLKhoa_FormClosed);
             this.Load += new System.EventHandler(this.FormQLKhoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_khoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

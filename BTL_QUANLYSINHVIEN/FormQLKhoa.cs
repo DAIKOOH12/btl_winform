@@ -222,6 +222,12 @@ namespace BTL_QUANLYSINHVIEN
                 dgv_khoa.DataSource = dtv;
             }
         }
+
+        private void FormQLKhoa_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
         //Mai đã sửa chỗ này và thêm chức năng này
     }
 }

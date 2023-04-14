@@ -24,31 +24,22 @@ namespace BTL_QUANLYSINHVIEN
         private void qli_khoa_Click(object sender, EventArgs e)
         {
             FormQLKhoa form2=new FormQLKhoa();
-            form2.FormBorderStyle= FormBorderStyle.None;
-            form2.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            form2.TopLevel = false;
-            panel1.Controls.Add(form2);
-            form2.Show();
+            form2.ShowDialog();
+            this.Refresh();
         }
 
         private void qli_nganh_Click(object sender, EventArgs e)
         {
             FormQLyNganh formQlyNganh=new FormQLyNganh();
-            formQlyNganh.FormBorderStyle= FormBorderStyle.None;
-            formQlyNganh.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            formQlyNganh.TopLevel= false;
-            panel1.Controls.Add(formQlyNganh);
-            formQlyNganh.Show();
+            formQlyNganh.ShowDialog();
+            this.Refresh();
         }
 
         private void qli_lop_Click(object sender, EventArgs e)
         {
             FormQlyLop formLop = new FormQlyLop();
-            formLop.FormBorderStyle = FormBorderStyle.None;
-            formLop.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            formLop.TopLevel = false;
-            panel1.Controls.Add(formLop);
-            formLop.Show();
+            formLop.ShowDialog();
+            this.Refresh();
         }
     }
 }

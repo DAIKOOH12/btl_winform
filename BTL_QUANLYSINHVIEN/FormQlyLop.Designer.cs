@@ -185,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 646);
+            this.ClientSize = new System.Drawing.Size(1317, 720);
             this.Controls.Add(this.btn_find);
             this.Controls.Add(this.btn_udt);
             this.Controls.Add(this.btn_xoa);
@@ -198,6 +198,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormQlyLop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormQlyLop";
             this.Load += new System.EventHandler(this.FormQlyLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lop)).EndInit();

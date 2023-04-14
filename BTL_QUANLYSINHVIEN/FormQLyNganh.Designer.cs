@@ -185,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 659);
+            this.ClientSize = new System.Drawing.Size(1223, 730);
             this.Controls.Add(this.btn_find);
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_fix);
@@ -198,6 +198,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_manganh);
             this.Name = "FormQLyNganh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormQLyNganh";
             this.Load += new System.EventHandler(this.FormQLyNganh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nganh)).EndInit();

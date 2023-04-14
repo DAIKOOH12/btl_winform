@@ -103,6 +103,26 @@ namespace BTL_QUANLYSINHVIEN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mattroithieuruihanhtinhjpg1resize_6c46e {
+            get {
+                object obj = ResourceManager.GetObject("mattroithieuruihanhtinhjpg1resize_6c46e", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scorpion_mortal_kombat_x_4K_wallpaper_pc_preview {
+            get {
+                object obj = ResourceManager.GetObject("scorpion-mortal-kombat-x-4K-wallpaper-pc-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap z3944006126817_d36422eeac8a868ec65db3d25dfdca4c {
             get {
                 object obj = ResourceManager.GetObject("z3944006126817_d36422eeac8a868ec65db3d25dfdca4c", resourceCulture);
