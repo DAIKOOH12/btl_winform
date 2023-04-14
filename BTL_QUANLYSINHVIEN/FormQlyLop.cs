@@ -151,6 +151,7 @@ namespace BTL_QUANLYSINHVIEN
                 }
                 finally { con.Close(); } 
                 loadData();
+                resetData();
             }
         }
 
