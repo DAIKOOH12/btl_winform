@@ -27,6 +27,7 @@ namespace BTL_QUANLYSINHVIEN
         private void FormQLyNganh_Load(object sender, EventArgs e)
         {
             tb_manganh.Focus();
+            dgv_nganh.ReadOnly= true;
         }
        
         private  void loadData()
@@ -35,7 +36,6 @@ namespace BTL_QUANLYSINHVIEN
             {
                 con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
                 con.Open();
-
                 string query_nganh = "Select * from tblNganh";
                 string query_khoa = "Select * from tblKhoa";
 

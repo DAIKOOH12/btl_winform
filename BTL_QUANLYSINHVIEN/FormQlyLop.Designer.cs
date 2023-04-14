@@ -42,6 +42,8 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_udt = new System.Windows.Forms.Button();
+            this.btn_find = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -159,11 +161,33 @@
             this.btn_xoa.UseVisualStyleBackColor = true;
             this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
+            // btn_udt
+            // 
+            this.btn_udt.Location = new System.Drawing.Point(811, 132);
+            this.btn_udt.Name = "btn_udt";
+            this.btn_udt.Size = new System.Drawing.Size(101, 34);
+            this.btn_udt.TabIndex = 4;
+            this.btn_udt.Text = "Cập nhật";
+            this.btn_udt.UseVisualStyleBackColor = true;
+            this.btn_udt.Click += new System.EventHandler(this.btn_udt_Click);
+            // 
+            // btn_find
+            // 
+            this.btn_find.Location = new System.Drawing.Point(811, 172);
+            this.btn_find.Name = "btn_find";
+            this.btn_find.Size = new System.Drawing.Size(101, 34);
+            this.btn_find.TabIndex = 4;
+            this.btn_find.Text = "Tìm kiếm";
+            this.btn_find.UseVisualStyleBackColor = true;
+            this.btn_find.Click += new System.EventHandler(this.btn_find_Click);
+            // 
             // FormQlyLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1136, 646);
+            this.Controls.Add(this.btn_find);
+            this.Controls.Add(this.btn_udt);
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.dgv_lop);
@@ -198,5 +222,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_xoa;
+        private System.Windows.Forms.Button btn_udt;
+        private System.Windows.Forms.Button btn_find;
     }
 }

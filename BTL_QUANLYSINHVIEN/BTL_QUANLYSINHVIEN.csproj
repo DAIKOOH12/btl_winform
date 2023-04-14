@@ -77,6 +77,12 @@
     <Compile Include="FormSuaThongTinKhoa.Designer.cs">
       <DependentUpon>FormSuaThongTinKhoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSuaThongTinLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuaThongTinLop.Designer.cs">
+      <DependentUpon>FormSuaThongTinLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSuaThongTinNganh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSuaThongTinKhoa.resx">
       <DependentUpon>FormSuaThongTinKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaThongTinLop.resx">
+      <DependentUpon>FormSuaThongTinLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSuaThongTinNganh.resx">
       <DependentUpon>FormSuaThongTinNganh.cs</DependentUpon>

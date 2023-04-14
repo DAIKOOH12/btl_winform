@@ -56,13 +56,17 @@ namespace BTL_QUANLYSINHVIEN
         private void FormQLKhoa_Load(object sender, EventArgs e)
         {
             loadData();
+            tb_makhoa.Focus();
             dgv_khoa.ReadOnly = true;
         }
 
         private void tb_makhoa_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(tb_makhoa, null);
-            errorProvider1.SetError(tb_tenkhoa, null);
+            if (!String.IsNullOrEmpty(tb_makhoa.Text))
+            {
+                errorProvider1.SetError(tb_makhoa, null);
+                errorProvider1.SetError(tb_tenkhoa, null);
+            }
         }
 
         private void tb_makhoa_Validating(object sender, CancelEventArgs e)
@@ -119,7 +123,7 @@ namespace BTL_QUANLYSINHVIEN
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Mã khoa tồn tại");
             }
             finally { con.Close(); }
             loadData();

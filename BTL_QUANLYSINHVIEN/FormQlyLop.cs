@@ -23,17 +23,16 @@ namespace BTL_QUANLYSINHVIEN
         }
         private void loadData()
         {
-            getNganh();
             try
             {
                 con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
                 con.Open();
-                string query_sel = "Select * from tblLop";
-                SqlCommand cmd=new SqlCommand(query_sel, con);
-                SqlDataAdapter adt = new SqlDataAdapter();
-                adt.SelectCommand= cmd;
+                string query = "Select * from tblLop";
+                SqlCommand cmd_lop=new SqlCommand(query, con);
+                SqlDataAdapter adt_lop = new SqlDataAdapter();
+                adt_lop.SelectCommand= cmd_lop;
                 dsLop.Clear();
-                adt.Fill(dsLop);
+                adt_lop.Fill(dsLop);
                 if (dsLop.Rows.Count > 0)
                 {
                     dgv_lop.DataSource = dsLop;
@@ -42,26 +41,14 @@ namespace BTL_QUANLYSINHVIEN
                 {
                     MessageBox.Show("Không có dữ liệu");
                 }
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally { con.Close(); }
-        }
-        private void getNganh()
-        {
-            try
-            {
-                con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
-                con.Open();
                 string query_sel = "Select * from tblNganh";
-                SqlCommand cmd = new SqlCommand(query_sel, con);
-                SqlDataAdapter adt = new SqlDataAdapter();
-                adt.SelectCommand = cmd;
+                SqlCommand cmd_nganh = new SqlCommand(query_sel, con);
+                SqlDataAdapter adt_nganh = new SqlDataAdapter();
+                adt_nganh.SelectCommand = cmd_nganh;
                 dsNganh.Clear();
-                adt.Fill(dsNganh);
+                adt_nganh.Fill(dsNganh);
                 if (dsNganh.Rows.Count > 0)
-                { 
+                {
                     cb_nganh.DataSource = dsNganh;
                     cb_nganh.DisplayMember = "sMaNganh";
                 }
@@ -70,7 +57,7 @@ namespace BTL_QUANLYSINHVIEN
                     MessageBox.Show("Không có dữ liệu");
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -85,7 +72,7 @@ namespace BTL_QUANLYSINHVIEN
         private void FormQlyLop_Load(object sender, EventArgs e)
         {
             loadData();
-            getNganh();
+            dgv_lop.ReadOnly = true;
         }
 
         private void tb_malop_Validating(object sender, CancelEventArgs e)
@@ -129,8 +116,9 @@ namespace BTL_QUANLYSINHVIEN
             finally { con.Close(); }
             loadData();
             resetData();
-            int index = dgv_lop.CurrentRow.Index-1;
-            dgv_lop.CurrentCell = dgv_lop.Rows[index].Cells[0];
+            //int index = dgv_lop.CurrentRow.Index;
+            //dgv_lop.Rows[index].Selected = true;
+            //dgv_lop.CurrentCell = dgv_lop.Rows[index-1].Cells[1];
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
@@ -166,6 +154,61 @@ namespace BTL_QUANLYSINHVIEN
         private void tb_malop_TextChanged(object sender, EventArgs e)
         {
             errorProvider1.SetError(tb_malop, null);
+            if (String.IsNullOrEmpty(tb_malop.Text)){
+                loadData();
+            }
+        }
+
+        private void btn_udt_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(tb_malop.Text))
+            {
+                MessageBox.Show("Bạn cần chọn 1 lớp để cập nhật");
+            }
+            else
+            {
+                FormSuaThongTinLop formSuaLop = new FormSuaThongTinLop(tb_malop.Text, tb_tenlop.Text, cb_nganh.Text, dsNganh);
+                formSuaLop.ShowDialog();
+                loadData();
+                resetData();
+            }
+        }
+
+        private void btn_find_Click(object sender, EventArgs e)
+        {
+            {
+                errorProvider1.SetError(tb_malop, null);
+                string filterMaLop = tb_malop.Text;
+                string filterTenLop = tb_tenlop.Text;
+                string FilterMaNganh = cb_nganh.Text;
+                DataView dtv = new DataView(dsLop);
+
+                if (String.IsNullOrEmpty(filterMaLop) && String.IsNullOrEmpty(filterTenLop))
+                {
+                    dtv.RowFilter = string.Format($"sMaNganh like '%{FilterMaNganh}%'");
+                }
+                if (String.IsNullOrEmpty(filterMaLop) && String.IsNullOrEmpty(FilterMaNganh))
+                {
+                    dtv.RowFilter = string.Format($" sTenLop like '%{filterTenLop}%'");
+                }
+                if (String.IsNullOrEmpty(filterTenLop) && String.IsNullOrEmpty(FilterMaNganh))
+                {
+                    dtv.RowFilter = string.Format($"sMaLop like '%{filterMaLop}%'");
+                }
+                if (String.IsNullOrEmpty(filterMaLop))
+                {
+                    dtv.RowFilter = string.Format($" sTenLop like '%{filterTenLop}%' and sMaNganh like '%{FilterMaNganh}%'");
+                }
+                if (String.IsNullOrEmpty(FilterMaNganh))
+                {
+                    dtv.RowFilter = string.Format($"sMaLop like '%{filterMaLop}%' and sTenLop like '%{filterTenLop}%'");
+                }
+                if (String.IsNullOrEmpty(filterTenLop))
+                {
+                    dtv.RowFilter = string.Format($"sMaLop like '%{filterMaLop}%' and sMaNganh like '%{FilterMaNganh}%'");
+                }
+                dgv_lop.DataSource = dtv;
+            }
         }
     }
 }
