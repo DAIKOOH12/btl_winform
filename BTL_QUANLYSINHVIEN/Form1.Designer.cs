@@ -110,6 +110,7 @@
             this.qli_lop.Name = "qli_lop";
             this.qli_lop.Size = new System.Drawing.Size(270, 34);
             this.qli_lop.Text = "Quản lý Lớp";
+            this.qli_lop.Click += new System.EventHandler(this.qli_lop_Click);
             // 
             // qli_sinhvien
             // 
@@ -244,6 +245,7 @@
             this.Controls.Add(this.mns_main);
             this.MainMenuStrip = this.mns_main;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý sinh viên";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.mns_main.ResumeLayout(false);

@@ -18,7 +18,7 @@ namespace BTL_QUANLYSINHVIEN
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            this.WindowState= FormWindowState.Maximized;
         }
 
         private void qli_khoa_Click(object sender, EventArgs e)
@@ -39,6 +39,16 @@ namespace BTL_QUANLYSINHVIEN
             formQlyNganh.TopLevel= false;
             panel1.Controls.Add(formQlyNganh);
             formQlyNganh.Show();
+        }
+
+        private void qli_lop_Click(object sender, EventArgs e)
+        {
+            FormQlyLop formLop = new FormQlyLop();
+            formLop.FormBorderStyle = FormBorderStyle.None;
+            formLop.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            formLop.TopLevel = false;
+            panel1.Controls.Add(formLop);
+            formLop.Show();
         }
     }
 }

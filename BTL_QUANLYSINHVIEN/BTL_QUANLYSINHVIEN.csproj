@@ -59,6 +59,12 @@
     <Compile Include="FormQLKhoa.Designer.cs">
       <DependentUpon>FormQLKhoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQlyLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQlyLop.Designer.cs">
+      <DependentUpon>FormQlyLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQLyNganh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLKhoa.resx">
       <DependentUpon>FormQLKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQlyLop.resx">
+      <DependentUpon>FormQlyLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLyNganh.resx">
       <DependentUpon>FormQLyNganh.cs</DependentUpon>
