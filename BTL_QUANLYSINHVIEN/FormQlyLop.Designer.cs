@@ -199,7 +199,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormQlyLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormQlyLop";
+            this.Text = "Quản lí lớp";
             this.Load += new System.EventHandler(this.FormQlyLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

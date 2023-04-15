@@ -127,7 +127,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormSuaThongTinLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormSuaThongTinLop";
+            this.Text = "Cập nhật thông tin lớp";
             this.Load += new System.EventHandler(this.FormSuaThongTinLop_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

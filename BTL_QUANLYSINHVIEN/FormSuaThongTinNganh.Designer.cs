@@ -127,7 +127,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormSuaThongTinNganh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormSuaThongTinNganh";
+            this.Text = "Cập nhật thông tin ngành";
             this.Load += new System.EventHandler(this.FormSuaThongTinNganh_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

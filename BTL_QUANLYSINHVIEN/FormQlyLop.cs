@@ -91,23 +91,30 @@ namespace BTL_QUANLYSINHVIEN
         {
             try
             {
-                con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
-                con.Open();
-                string query_check = $"Select * from tblLop where sMaLop='{tb_malop.Text}'";
-                SqlCommand cmd=new SqlCommand(query_check,con);
-                SqlDataAdapter adt = new SqlDataAdapter();
-                adt.SelectCommand=cmd;
-                DataTable checkLop=new DataTable();
-                adt.Fill(checkLop);
-                if (checkLop.Rows.Count >= 1)
+                if(!String.IsNullOrEmpty(tb_malop.Text))
                 {
-                    errorProvider1.SetError(tb_malop, "Mã lớp đã tồn tại"); 
+                    con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+                    con.Open();
+                    string query_check = $"Select * from tblLop where sMaLop='{tb_malop.Text}'";
+                    SqlCommand cmd = new SqlCommand(query_check, con);
+                    SqlDataAdapter adt = new SqlDataAdapter();
+                    adt.SelectCommand = cmd;
+                    DataTable checkLop = new DataTable();
+                    adt.Fill(checkLop);
+                    if (checkLop.Rows.Count >= 1)
+                    {
+                        errorProvider1.SetError(tb_malop, "Mã lớp đã tồn tại");
+                    }
+                    else
+                    {
+                        string query_ins = $"insert into tblLop values('{tb_malop.Text}',N'{tb_tenlop.Text}','{cb_nganh.Text}')";
+                        SqlCommand cmd_ins = new SqlCommand(query_ins, con);
+                        cmd_ins.ExecuteNonQuery();
+                    }
                 }
                 else
                 {
-                    string query_ins = $"insert into tblLop values('{tb_malop.Text}',N'{tb_tenlop.Text}','{cb_nganh.Text}')";
-                    SqlCommand cmd_ins=new SqlCommand(query_ins,con);
-                    cmd_ins.ExecuteNonQuery();
+                    errorProvider1.SetError(tb_malop, "Mã lớp không được để trống");
                 }
             }catch(Exception ex)
             {
@@ -206,6 +213,10 @@ namespace BTL_QUANLYSINHVIEN
                 if (String.IsNullOrEmpty(filterTenLop))
                 {
                     dtv.RowFilter = string.Format($"sMaLop like '%{filterMaLop}%' and sMaNganh like '%{FilterMaNganh}%'");
+                }
+                if (!String.IsNullOrEmpty(filterMaLop)&&!String.IsNullOrEmpty(filterTenLop))
+                {
+                    dtv.RowFilter = string.Format($"sMaLop like '%{filterMaLop}%' and sTenLop like '%{filterTenLop}%'");
                 }
                 dgv_lop.DataSource = dtv;
             }

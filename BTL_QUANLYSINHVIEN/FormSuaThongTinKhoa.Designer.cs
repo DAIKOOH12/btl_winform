@@ -126,7 +126,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormSuaThongTinKhoa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormSuaThongTinKhoa";
+            this.Text = "Cập nhật thông tin khoa";
             this.Load += new System.EventHandler(this.FormSuaThongTinKhoa_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -199,7 +199,7 @@
             this.Controls.Add(this.lb_manganh);
             this.Name = "FormQLyNganh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormQLyNganh";
+            this.Text = "Quản lí ngành";
             this.Load += new System.EventHandler(this.FormQLyNganh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nganh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

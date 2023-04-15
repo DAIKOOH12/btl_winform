@@ -93,28 +93,35 @@ namespace BTL_QUANLYSINHVIEN
         {
             try
             {
-                con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
-                con.Open();
-                string query_check = $"Select * from tblNganh where sMaNganh='{tb_manganh.Text}'";
-                SqlCommand cmd = new SqlCommand(query_check, con);
-                SqlDataAdapter adt=new SqlDataAdapter();
-                adt.SelectCommand= cmd;
-                dsCheck.Clear();
-                adt.Fill(dsCheck);
-                if (dsCheck.Rows.Count >= 1)
+                if (!String.IsNullOrEmpty(tb_manganh.Text))
                 {
-                    errorProvider1.SetError(tb_manganh, "Mã ngành này đã tồn tại");
+                    con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+                    con.Open();
+                    string query_check = $"Select * from tblNganh where sMaNganh='{tb_manganh.Text}'";
+                    SqlCommand cmd = new SqlCommand(query_check, con);
+                    SqlDataAdapter adt = new SqlDataAdapter();
+                    adt.SelectCommand = cmd;
+                    dsCheck.Clear();
+                    adt.Fill(dsCheck);
+                    if (dsCheck.Rows.Count >= 1)
+                    {
+                        errorProvider1.SetError(tb_manganh, "Mã ngành này đã tồn tại");
+                    }
+                    else
+                    {
+                        string query_ins = $"insert into tblNganh values('{tb_manganh.Text}',N'{tb_tennganh.Text}','{cb_khoa.Text}')";
+                        SqlCommand cmd_ins = new SqlCommand(query_ins, con);
+                        cmd_ins.ExecuteNonQuery();
+                        con.Close();
+                        loadData();
+                        resetData();
+                        int index = dsNganh.Rows.Count - 1;
+                        dgv_nganh.CurrentCell = dgv_nganh.Rows[index].Cells[0];
+                    }
                 }
                 else
                 {
-                    string query_ins = $"insert into tblNganh values('{tb_manganh.Text}',N'{tb_tennganh.Text}','{cb_khoa.Text}')";
-                    SqlCommand cmd_ins = new SqlCommand(query_ins, con);
-                    cmd_ins.ExecuteNonQuery();
-                    con.Close();
-                    loadData();
-                    resetData();
-                    int index = dsNganh.Rows.Count - 1;
-                    dgv_nganh.CurrentCell = dgv_nganh.Rows[index].Cells[0];
+                    errorProvider1.SetError(tb_manganh, "Mã ngành không được để trống");
                 }
             }
             catch(Exception ex)

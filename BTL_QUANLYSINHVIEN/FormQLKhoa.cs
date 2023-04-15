@@ -56,7 +56,6 @@ namespace BTL_QUANLYSINHVIEN
         private void FormQLKhoa_Load(object sender, EventArgs e)
         {
             loadData();
-            tb_makhoa.Focus();
             dgv_khoa.ReadOnly = true;
         }
 
@@ -102,24 +101,31 @@ namespace BTL_QUANLYSINHVIEN
             {
                 con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
                 con.Open();
-                string ma_khoa = tb_makhoa.Text;
-                string query_select = $"Select * from tblKhoa where sMaKhoa='{ma_khoa}'";
-                SqlCommand cmd = new SqlCommand(query_select, con);
-                SqlDataAdapter adt = new SqlDataAdapter();
-                adt.SelectCommand= cmd;
-                dt_check.Clear();
-                adt.Fill(dt_check);
-                if (dt_check.Rows.Count>=1)
+                if (!String.IsNullOrEmpty(tb_makhoa.Text))
                 {
-                    errorProvider1.SetError(tb_makhoa, "Mã khoa đã tồn tại");
+                    string ma_khoa = tb_makhoa.Text;
+                    string query_select = $"Select * from tblKhoa where sMaKhoa='{ma_khoa}'";
+                    SqlCommand cmd = new SqlCommand(query_select, con);
+                    SqlDataAdapter adt = new SqlDataAdapter();
+                    adt.SelectCommand= cmd;
+                    dt_check.Clear();
+                    adt.Fill(dt_check);
+                    if (dt_check.Rows.Count>=1)
+                    {
+                        errorProvider1.SetError(tb_makhoa, "Mã khoa đã tồn tại");
+                    }
+                    else
+                    {
+                        string query_ins = $"insert into tblKhoa values('{tb_makhoa.Text}',N'{tb_tenkhoa.Text}',N'{tb_diachi.Text}')";
+                        SqlCommand cmd_ins=new SqlCommand(query_ins, con);
+                        cmd_ins.ExecuteNonQuery();
+                    }
+                    reLoad();
                 }
                 else
                 {
-                    string query_ins = $"insert into tblKhoa values('{tb_makhoa.Text}',N'{tb_tenkhoa.Text}',N'{tb_diachi.Text}')";
-                    SqlCommand cmd_ins=new SqlCommand(query_ins, con);
-                    cmd_ins.ExecuteNonQuery();
+                    errorProvider1.SetError(tb_makhoa, "Mã khoa không được để trống");
                 }
-                reLoad();
             }
             catch(Exception ex)
             {
@@ -218,6 +224,10 @@ namespace BTL_QUANLYSINHVIEN
                 if (String.IsNullOrEmpty(filterTenKhoa))
                 {
                     dtv.RowFilter = string.Format($"sMaKhoa like '%{filterMaKhoa}%' and sDiaChi like '%{filterDiaChi}%'");
+                }
+                if(!String.IsNullOrEmpty(filterMaKhoa) && !String.IsNullOrEmpty(filterTenKhoa)&&!String.IsNullOrEmpty(filterDiaChi))
+                {
+                    dtv.RowFilter = string.Format($"sMaKhoa like '%{filterMaKhoa}%' and sTenKhoa like '%{filterTenKhoa}%' and sDiaChi like '%{filterDiaChi}%'");
                 }
                 dgv_khoa.DataSource = dtv;
             }

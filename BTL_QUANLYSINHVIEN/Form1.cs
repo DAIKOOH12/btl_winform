@@ -41,5 +41,11 @@ namespace BTL_QUANLYSINHVIEN
             formLop.ShowDialog();
             this.Refresh();
         }
+
+        private void qli_sinhvien_Click(object sender, EventArgs e)
+        {
+            FormQlySV formSV = new FormQlySV();
+            formSV.ShowDialog();
+        }
     }
 }
