@@ -64,6 +64,9 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_fix = new System.Windows.Forms.Button();
+            this.btn_find = new System.Windows.Forms.Button();
+            this.btn_tiep = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sinhvien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -262,11 +265,11 @@
             this.sQueQuan,
             this.sGioiTinh,
             this.sMaLop});
-            this.dgv_sinhvien.Location = new System.Drawing.Point(1, 314);
+            this.dgv_sinhvien.Location = new System.Drawing.Point(37, 335);
             this.dgv_sinhvien.Name = "dgv_sinhvien";
             this.dgv_sinhvien.RowHeadersWidth = 62;
             this.dgv_sinhvien.RowTemplate.Height = 28;
-            this.dgv_sinhvien.Size = new System.Drawing.Size(1446, 371);
+            this.dgv_sinhvien.Size = new System.Drawing.Size(1381, 378);
             this.dgv_sinhvien.TabIndex = 5;
             this.dgv_sinhvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_sinhvien_CellClick);
             // 
@@ -276,7 +279,7 @@
             this.sSoBD.HeaderText = "Số báo danh";
             this.sSoBD.MinimumWidth = 8;
             this.sSoBD.Name = "sSoBD";
-            this.sSoBD.Width = 93;
+            this.sSoBD.Width = 126;
             // 
             // sHoTen
             // 
@@ -300,7 +303,7 @@
             this.sCMND.HeaderText = "Chứng minh nhân dân";
             this.sCMND.MinimumWidth = 8;
             this.sCMND.Name = "sCMND";
-            this.sCMND.Width = 114;
+            this.sCMND.Width = 160;
             // 
             // sTonGiao
             // 
@@ -324,7 +327,7 @@
             this.sTruongTotNghiep.HeaderText = "Trường tốt nghiệp";
             this.sTruongTotNghiep.MinimumWidth = 8;
             this.sTruongTotNghiep.Name = "sTruongTotNghiep";
-            this.sTruongTotNghiep.Width = 113;
+            this.sTruongTotNghiep.Width = 156;
             // 
             // sQueQuan
             // 
@@ -356,9 +359,9 @@
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(1022, 73);
+            this.btn_add.Location = new System.Drawing.Point(1008, 76);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(89, 29);
+            this.btn_add.Size = new System.Drawing.Size(103, 43);
             this.btn_add.TabIndex = 6;
             this.btn_add.Text = "Thêm mới";
             this.btn_add.UseVisualStyleBackColor = true;
@@ -366,13 +369,43 @@
             // 
             // btn_xoa
             // 
-            this.btn_xoa.Location = new System.Drawing.Point(1022, 112);
+            this.btn_xoa.Location = new System.Drawing.Point(1008, 137);
             this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(89, 29);
+            this.btn_xoa.Size = new System.Drawing.Size(103, 46);
             this.btn_xoa.TabIndex = 6;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = true;
             this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            // 
+            // btn_fix
+            // 
+            this.btn_fix.Location = new System.Drawing.Point(1117, 76);
+            this.btn_fix.Name = "btn_fix";
+            this.btn_fix.Size = new System.Drawing.Size(105, 43);
+            this.btn_fix.TabIndex = 6;
+            this.btn_fix.Text = "Cập nhật";
+            this.btn_fix.UseVisualStyleBackColor = true;
+            this.btn_fix.Click += new System.EventHandler(this.btn_fix_Click);
+            // 
+            // btn_find
+            // 
+            this.btn_find.Location = new System.Drawing.Point(1117, 137);
+            this.btn_find.Name = "btn_find";
+            this.btn_find.Size = new System.Drawing.Size(105, 43);
+            this.btn_find.TabIndex = 6;
+            this.btn_find.Text = "Tìm kiếm";
+            this.btn_find.UseVisualStyleBackColor = true;
+            this.btn_find.Click += new System.EventHandler(this.btn_find_Click);
+            // 
+            // btn_tiep
+            // 
+            this.btn_tiep.Location = new System.Drawing.Point(1062, 195);
+            this.btn_tiep.Name = "btn_tiep";
+            this.btn_tiep.Size = new System.Drawing.Size(105, 43);
+            this.btn_tiep.TabIndex = 6;
+            this.btn_tiep.Text = "Tiếp tục";
+            this.btn_tiep.UseVisualStyleBackColor = true;
+            this.btn_tiep.Click += new System.EventHandler(this.btn_tiep_Click);
             // 
             // FormQlySV
             // 
@@ -380,6 +413,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1480, 777);
             this.Controls.Add(this.btn_xoa);
+            this.Controls.Add(this.btn_tiep);
+            this.Controls.Add(this.btn_find);
+            this.Controls.Add(this.btn_fix);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.dgv_sinhvien);
             this.Controls.Add(this.cb_lop);
@@ -451,5 +487,8 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_xoa;
+        private System.Windows.Forms.Button btn_fix;
+        private System.Windows.Forms.Button btn_find;
+        private System.Windows.Forms.Button btn_tiep;
     }
 }

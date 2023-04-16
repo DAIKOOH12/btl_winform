@@ -75,7 +75,9 @@ namespace BTL_QUANLYSINHVIEN
             tb_quequan.Clear();
             rd_nam.Checked= false;
             rd_nu.Checked=false;
+            errorProvider1.SetError(rd_nu, null);
         }
+   
         private void FormQlySV_Load(object sender, EventArgs e)
         {
             loadData();
@@ -99,23 +101,23 @@ namespace BTL_QUANLYSINHVIEN
         {
             errorProvider1.SetError(tb_sbd, null);
             int index = dgv_sinhvien.CurrentRow.Index;
-            tb_sbd.Text = dsSV.Rows[index][0].ToString();
-            tb_hoten.Text = dsSV.Rows[index][1].ToString();
-            dtp_ngaysinh.Text = dsSV.Rows[index][2].ToString();
-            tb_cmnd.Text = dsSV.Rows[index][3].ToString();
-            tb_tongiao.Text = dsSV.Rows[index][4].ToString();
-            tb_email.Text = dsSV.Rows[index][5].ToString();
-            tb_truong.Text = dsSV.Rows[index][6].ToString();
-            tb_quequan.Text = dsSV.Rows[index][7].ToString();
-            if (String.Compare(dsSV.Rows[index][8].ToString(),"Nam")==0)
+            tb_sbd.Text = dsSV.Rows[index]["sSoBd"].ToString();
+            tb_hoten.Text = dsSV.Rows[index]["sHoTen"].ToString();
+            dtp_ngaysinh.Text = dsSV.Rows[index]["dNgaySinh"].ToString();
+            tb_cmnd.Text = dsSV.Rows[index]["sCMND"].ToString();
+            tb_tongiao.Text = dsSV.Rows[index]["sTonGiao"].ToString();
+            tb_email.Text = dsSV.Rows[index]["sEmail"].ToString();
+            tb_truong.Text = dsSV.Rows[index]["sTruongTotNghiep"].ToString();
+            tb_quequan.Text = dsSV.Rows[index]["sQueQuan"].ToString();
+            if (String.Compare(dsSV.Rows[index]["sGioiTinh"].ToString(),"Nam")==0)
             {
                 rd_nam.Checked= true;
             }
-            if (String.Compare(dsSV.Rows[index][8].ToString(),"Nữ")==0)
+            if (String.Compare(dsSV.Rows[index]["sGioiTinh"].ToString(),"Nữ")==0)
             {
                 rd_nu.Checked= true;
             }
-            cb_lop.Text = dsSV.Rows[index][9].ToString();
+            cb_lop.Text = dsSV.Rows[index]["sMaLop"].ToString();
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -124,36 +126,43 @@ namespace BTL_QUANLYSINHVIEN
             {
                 try
                 {
-                    con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ToString();
-                    con.Open();
-                    string query_check = $"select * from tblSinhVien where sSoBD='{tb_sbd.Text}'";
-                    SqlCommand cmd_check=new SqlCommand(query_check,con);
-                    SqlDataAdapter adt_check=new SqlDataAdapter();
-                    adt_check.SelectCommand= cmd_check;
-                    sv_check.Clear();
-                    adt_check.Fill(sv_check);
-                    if (sv_check.Rows.Count >= 1)
+                    if (rd_nam.Checked == false && rd_nu.Checked == false)
                     {
-                        errorProvider1.SetError(tb_sbd, "Số báo danh đã tồn tại");
+                        errorProvider1.SetError(rd_nu, "Bạn cần chọn giới tính");
                     }
                     else
                     {
+                        con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ToString();
+                        con.Open();
                         string gender = "";
+                        string query_check = $"select * from tblSinhVien where sSoBD='{tb_sbd.Text}'";
+                        SqlCommand cmd_check = new SqlCommand(query_check, con);
+                        SqlDataAdapter adt_check = new SqlDataAdapter();
+                        adt_check.SelectCommand = cmd_check;
+                        sv_check.Clear();
+                        adt_check.Fill(sv_check);
                         if (rd_nam.Checked)
                         {
-                            gender = "Name";
+                            gender = "Nam";
                         }
                         if (rd_nu.Checked)
                         {
                             gender = "Nữ";
                         }
-                        string query_ins = $"insert into tblSinhVien values('{tb_sbd.Text}',N'{tb_hoten.Text}','{dtp_ngaysinh.Text}','{tb_cmnd.Text}',N'{tb_tongiao.Text}','{tb_email.Text}',N'{tb_truong.Text}',N'{tb_quequan.Text}',N'{gender}','{cb_lop.Text}')";
-                        SqlCommand cmd_ins = new SqlCommand(query_ins, con);
-                        SqlDataAdapter adt_ins = new SqlDataAdapter();
-                        cmd_ins.ExecuteNonQuery();
+                        if (sv_check.Rows.Count >= 1)
+                        {
+                            errorProvider1.SetError(tb_sbd, "Số báo danh đã tồn tại");
+                        }
+                        else
+                        {
+                            string query_ins = $"insert into tblSinhVien values('{tb_sbd.Text}',N'{tb_hoten.Text}','{dtp_ngaysinh.Text}','{tb_cmnd.Text}',N'{tb_tongiao.Text}','{tb_email.Text}',N'{tb_truong.Text}',N'{tb_quequan.Text}',N'{gender}','{cb_lop.Text}')";
+                            SqlCommand cmd_ins = new SqlCommand(query_ins, con);
+                            SqlDataAdapter adt_ins = new SqlDataAdapter();
+                            cmd_ins.ExecuteNonQuery();
+                        }
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -193,6 +202,82 @@ namespace BTL_QUANLYSINHVIEN
                     resetData();
                 }
             }
+        }
+
+        private void btn_fix_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(tb_sbd.Text))
+            {
+                MessageBox.Show("Bạn cần chọn 1 thông tin sinh viên để sửa");
+            }
+            else
+            {
+                if (rd_nam.Checked)
+                {
+                    FormSuaThongTinSV formSV = new FormSuaThongTinSV(tb_sbd.Text, tb_hoten.Text, dtp_ngaysinh.Text, tb_cmnd.Text, "False", tb_tongiao.Text, tb_email.Text, tb_truong.Text, tb_quequan.Text, cb_lop.Text,dsLop);
+                    formSV.ShowDialog(this);
+                }
+                if(rd_nu.Checked)
+                {
+                    FormSuaThongTinSV formSV = new FormSuaThongTinSV(tb_sbd.Text, tb_hoten.Text, dtp_ngaysinh.Text, tb_cmnd.Text, "True", tb_tongiao.Text, tb_email.Text, tb_truong.Text, tb_quequan.Text, cb_lop.Text,dsLop);
+                    formSV.ShowDialog(this);
+                }
+            }
+            loadData();
+            resetData();
+        }
+
+        private void btn_find_Click(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(tb_sbd, null);
+            string filterSBD = tb_sbd.Text;
+            string filterHoTen = tb_hoten.Text;
+            string filterNgaySinh = dtp_ngaysinh.Text;
+            string filterCMND= tb_cmnd.Text;
+            string filterTonGiao= tb_tongiao.Text;
+            string filterEmail=tb_email.Text;
+            string filterTruong=tb_truong.Text;
+            string filterQueQuan=tb_quequan.Text;
+            string filterGioiTinh = "";
+            if(rd_nam.Checked)
+            {
+                filterGioiTinh = "Nam";
+            }
+            if(rd_nu.Checked)
+            {
+                filterGioiTinh = "Nữ";
+            }
+            string fillterLop=cb_lop.Text;
+            DataView dtv = new DataView(dsSV);
+
+            dtv.RowFilter = String.Format($"sMaLop like '%{fillterLop}%'");
+            if(!String.IsNullOrEmpty(filterSBD) )
+            {
+                dtv.RowFilter = String.Format($"sSoBD like '%{filterSBD}%'");
+            }
+            if (!String.IsNullOrEmpty(filterGioiTinh))
+            {
+                dtv.RowFilter = String.Format($"sGioiTinh like '%{filterGioiTinh}%'");
+            }
+            if (!String.IsNullOrEmpty(filterEmail))
+            {
+                dtv.RowFilter = String.Format($"sEmail like '%{filterEmail}%'");
+            }
+            if(!String.IsNullOrEmpty(filterTruong))
+            {
+                dtv.RowFilter = String.Format($"sTruongTotNghiep like '%{filterTruong}%'");
+            }
+            if(!String.IsNullOrEmpty(filterQueQuan))
+            {
+                dtv.RowFilter = String.Format($"sQueQuan like '%{filterQueQuan}%'");
+            }
+            dgv_sinhvien.DataSource = dtv;
+        }
+
+        private void btn_tiep_Click(object sender, EventArgs e)
+        {
+            loadData();
+            resetData();
         }
     }
 }
