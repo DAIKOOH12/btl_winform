@@ -251,6 +251,10 @@ namespace BTL_QUANLYSINHVIEN
             DataView dtv = new DataView(dsSV);
 
             dtv.RowFilter = String.Format($"sMaLop like '%{fillterLop}%'");
+            if (!String.IsNullOrEmpty(filterHoTen))
+            {
+                dtv.RowFilter = String.Format($"sHoTen like '%{filterHoTen}%'");
+            }
             if(!String.IsNullOrEmpty(filterSBD) )
             {
                 dtv.RowFilter = String.Format($"sSoBD like '%{filterSBD}%'");
@@ -278,6 +282,14 @@ namespace BTL_QUANLYSINHVIEN
         {
             loadData();
             resetData();
+        }
+
+        private void tb_cmnd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

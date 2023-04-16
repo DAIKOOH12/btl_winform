@@ -47,5 +47,11 @@ namespace BTL_QUANLYSINHVIEN
             FormQlySV formSV = new FormQlySV();
             formSV.ShowDialog();
         }
+
+        private void qli_hoso_Click(object sender, EventArgs e)
+        {
+            FormQlyHoSo formHoSo=new FormQlyHoSo();
+            formHoSo.ShowDialog();
+        }
     }
 }

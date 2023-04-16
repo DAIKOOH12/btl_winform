@@ -124,6 +124,7 @@
             this.qli_hoso.Name = "qli_hoso";
             this.qli_hoso.Size = new System.Drawing.Size(270, 34);
             this.qli_hoso.Text = "Quản lý Hồ sơ";
+            this.qli_hoso.Click += new System.EventHandler(this.qli_hoso_Click);
             // 
             // qli_hoadon
             // 

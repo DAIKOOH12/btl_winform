@@ -59,6 +59,12 @@
     <Compile Include="FormQLKhoa.Designer.cs">
       <DependentUpon>FormQLKhoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQlyHoSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQlyHoSo.Designer.cs">
+      <DependentUpon>FormQlyHoSo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQlyLop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,12 @@
     </Compile>
     <Compile Include="FormQlySV.Designer.cs">
       <DependentUpon>FormQlySV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuaThongTinHoSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuaThongTinHoSo.Designer.cs">
+      <DependentUpon>FormSuaThongTinHoSo.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSuaThongTinKhoa.cs">
       <SubType>Form</SubType>
@@ -109,6 +121,9 @@
     <EmbeddedResource Include="FormQLKhoa.resx">
       <DependentUpon>FormQLKhoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormQlyHoSo.resx">
+      <DependentUpon>FormQlyHoSo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQlyLop.resx">
       <DependentUpon>FormQlyLop.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQlySV.resx">
       <DependentUpon>FormQlySV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaThongTinHoSo.resx">
+      <DependentUpon>FormSuaThongTinHoSo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSuaThongTinKhoa.resx">
       <DependentUpon>FormSuaThongTinKhoa.cs</DependentUpon>

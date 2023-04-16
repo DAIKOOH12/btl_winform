@@ -128,6 +128,7 @@
             this.tb_cmnd.Name = "tb_cmnd";
             this.tb_cmnd.Size = new System.Drawing.Size(200, 26);
             this.tb_cmnd.TabIndex = 1;
+            this.tb_cmnd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_cmnd_KeyPress);
             // 
             // dtp_ngaysinh
             // 
