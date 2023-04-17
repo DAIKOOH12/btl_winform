@@ -301,5 +301,6 @@ namespace BTL_QUANLYSINHVIEN
 
             dgv_diem.DataSource = dtv;
         }
+        //Duy Trường đã sửa đoạn này
     }
 }
