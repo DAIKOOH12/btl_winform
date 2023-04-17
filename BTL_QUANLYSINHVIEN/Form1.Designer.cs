@@ -145,6 +145,7 @@
             this.qli_canbo.Name = "qli_canbo";
             this.qli_canbo.Size = new System.Drawing.Size(270, 34);
             this.qli_canbo.Text = "Quản lý Cán bộ";
+            this.qli_canbo.Click += new System.EventHandler(this.qli_canbo_Click);
             // 
             // mnsi_baocao
             // 

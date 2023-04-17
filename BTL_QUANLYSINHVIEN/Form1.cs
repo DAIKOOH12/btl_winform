@@ -65,5 +65,11 @@ namespace BTL_QUANLYSINHVIEN
             FormQlyDiemChuan formDiem = new FormQlyDiemChuan();
             formDiem.ShowDialog();
         }
+
+        private void qli_canbo_Click(object sender, EventArgs e)
+        {
+            FormQlyCanBo formCB=new FormQlyCanBo();
+            formCB.ShowDialog();
+        }
     }
 }

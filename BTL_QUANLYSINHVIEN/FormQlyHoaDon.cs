@@ -162,9 +162,10 @@ namespace BTL_QUANLYSINHVIEN
         {
             string filterMaHD=tb_mahoadon.Text;
             string filterTien=tb_tien.Text;
-            string filterLop = cb_sbd.Text;
+            string filterSBD = cb_sbd.Text;
             DataView dtv = new DataView(dsHD);
 
+            dtv.RowFilter = $"sSoBD = '{filterSBD}'";
             if (!String.IsNullOrEmpty(filterMaHD))
             {
                 dtv.RowFilter = String.Format($"sMaHD like '%{filterMaHD}%'");
