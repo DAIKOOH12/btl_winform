@@ -131,12 +131,14 @@
             this.qli_hoadon.Name = "qli_hoadon";
             this.qli_hoadon.Size = new System.Drawing.Size(270, 34);
             this.qli_hoadon.Text = "Quản lý Hóa đơn";
+            this.qli_hoadon.Click += new System.EventHandler(this.qli_hoadon_Click);
             // 
             // qli_diem
             // 
             this.qli_diem.Name = "qli_diem";
             this.qli_diem.Size = new System.Drawing.Size(270, 34);
             this.qli_diem.Text = "Quản lý Điểm";
+            this.qli_diem.Click += new System.EventHandler(this.qli_diem_Click);
             // 
             // qli_canbo
             // 

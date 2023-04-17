@@ -53,5 +53,17 @@ namespace BTL_QUANLYSINHVIEN
             FormQlyHoSo formHoSo=new FormQlyHoSo();
             formHoSo.ShowDialog();
         }
+
+        private void qli_hoadon_Click(object sender, EventArgs e)
+        {
+            FormQlyHoaDon formHD=new FormQlyHoaDon();
+            formHD.ShowDialog();
+        }
+
+        private void qli_diem_Click(object sender, EventArgs e)
+        {
+            FormQlyDiemChuan formDiem = new FormQlyDiemChuan();
+            formDiem.ShowDialog();
+        }
     }
 }

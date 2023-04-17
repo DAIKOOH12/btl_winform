@@ -59,6 +59,18 @@
     <Compile Include="FormQLKhoa.Designer.cs">
       <DependentUpon>FormQLKhoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQlyDiemChuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQlyDiemChuan.Designer.cs">
+      <DependentUpon>FormQlyDiemChuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQlyHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQlyHoaDon.Designer.cs">
+      <DependentUpon>FormQlyHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQlyHoSo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +94,18 @@
     </Compile>
     <Compile Include="FormQlySV.Designer.cs">
       <DependentUpon>FormQlySV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuaThongTinDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuaThongTinDiem.Designer.cs">
+      <DependentUpon>FormSuaThongTinDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuaThongTinHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuaThongTinHD.Designer.cs">
+      <DependentUpon>FormSuaThongTinHD.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSuaThongTinHoSo.cs">
       <SubType>Form</SubType>
@@ -121,6 +145,12 @@
     <EmbeddedResource Include="FormQLKhoa.resx">
       <DependentUpon>FormQLKhoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormQlyDiemChuan.resx">
+      <DependentUpon>FormQlyDiemChuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQlyHoaDon.resx">
+      <DependentUpon>FormQlyHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQlyHoSo.resx">
       <DependentUpon>FormQlyHoSo.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +162,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQlySV.resx">
       <DependentUpon>FormQlySV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaThongTinDiem.resx">
+      <DependentUpon>FormSuaThongTinDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaThongTinHD.resx">
+      <DependentUpon>FormSuaThongTinHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSuaThongTinHoSo.resx">
       <DependentUpon>FormSuaThongTinHoSo.cs</DependentUpon>
