@@ -41,10 +41,10 @@
             this.qli_diem = new System.Windows.Forms.ToolStripMenuItem();
             this.qli_canbo = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsi_baocao = new System.Windows.Forms.ToolStripMenuItem();
-            this.tke_sinhvien = new System.Windows.Forms.ToolStripMenuItem();
-            this.tke_nganh = new System.Windows.Forms.ToolStripMenuItem();
-            this.tke_lop = new System.Windows.Forms.ToolStripMenuItem();
             this.tke_khoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.tke_nganh = new System.Windows.Forms.ToolStripMenuItem();
+            this.tke_sinhvien = new System.Windows.Forms.ToolStripMenuItem();
+            this.tke_lop = new System.Windows.Forms.ToolStripMenuItem();
             this.tke_hososinhvien = new System.Windows.Forms.ToolStripMenuItem();
             this.tke_hoadon = new System.Windows.Forms.ToolStripMenuItem();
             this.tke_diemchuan = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,66 +94,66 @@
             // qli_khoa
             // 
             this.qli_khoa.Name = "qli_khoa";
-            this.qli_khoa.Size = new System.Drawing.Size(270, 34);
+            this.qli_khoa.Size = new System.Drawing.Size(251, 34);
             this.qli_khoa.Text = "Quản lý Khoa";
             this.qli_khoa.Click += new System.EventHandler(this.qli_khoa_Click);
             // 
             // qli_nganh
             // 
             this.qli_nganh.Name = "qli_nganh";
-            this.qli_nganh.Size = new System.Drawing.Size(270, 34);
+            this.qli_nganh.Size = new System.Drawing.Size(251, 34);
             this.qli_nganh.Text = "Quản lý Ngành";
             this.qli_nganh.Click += new System.EventHandler(this.qli_nganh_Click);
             // 
             // qli_lop
             // 
             this.qli_lop.Name = "qli_lop";
-            this.qli_lop.Size = new System.Drawing.Size(270, 34);
+            this.qli_lop.Size = new System.Drawing.Size(251, 34);
             this.qli_lop.Text = "Quản lý Lớp";
             this.qli_lop.Click += new System.EventHandler(this.qli_lop_Click);
             // 
             // qli_sinhvien
             // 
             this.qli_sinhvien.Name = "qli_sinhvien";
-            this.qli_sinhvien.Size = new System.Drawing.Size(270, 34);
+            this.qli_sinhvien.Size = new System.Drawing.Size(251, 34);
             this.qli_sinhvien.Text = "Quản lý Sinh viên";
             this.qli_sinhvien.Click += new System.EventHandler(this.qli_sinhvien_Click);
             // 
             // qli_hoso
             // 
             this.qli_hoso.Name = "qli_hoso";
-            this.qli_hoso.Size = new System.Drawing.Size(270, 34);
+            this.qli_hoso.Size = new System.Drawing.Size(251, 34);
             this.qli_hoso.Text = "Quản lý Hồ sơ";
             this.qli_hoso.Click += new System.EventHandler(this.qli_hoso_Click);
             // 
             // qli_hoadon
             // 
             this.qli_hoadon.Name = "qli_hoadon";
-            this.qli_hoadon.Size = new System.Drawing.Size(270, 34);
+            this.qli_hoadon.Size = new System.Drawing.Size(251, 34);
             this.qli_hoadon.Text = "Quản lý Hóa đơn";
             this.qli_hoadon.Click += new System.EventHandler(this.qli_hoadon_Click);
             // 
             // qli_diem
             // 
             this.qli_diem.Name = "qli_diem";
-            this.qli_diem.Size = new System.Drawing.Size(270, 34);
+            this.qli_diem.Size = new System.Drawing.Size(251, 34);
             this.qli_diem.Text = "Quản lý Điểm";
             this.qli_diem.Click += new System.EventHandler(this.qli_diem_Click);
             // 
             // qli_canbo
             // 
             this.qli_canbo.Name = "qli_canbo";
-            this.qli_canbo.Size = new System.Drawing.Size(270, 34);
+            this.qli_canbo.Size = new System.Drawing.Size(251, 34);
             this.qli_canbo.Text = "Quản lý Cán bộ";
             this.qli_canbo.Click += new System.EventHandler(this.qli_canbo_Click);
             // 
             // mnsi_baocao
             // 
             this.mnsi_baocao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tke_sinhvien,
-            this.tke_nganh,
-            this.tke_lop,
             this.tke_khoa,
+            this.tke_nganh,
+            this.tke_sinhvien,
+            this.tke_lop,
             this.tke_hososinhvien,
             this.tke_hoadon,
             this.tke_diemchuan,
@@ -162,52 +162,53 @@
             this.mnsi_baocao.Size = new System.Drawing.Size(113, 29);
             this.mnsi_baocao.Text = "THỐNG KÊ";
             // 
-            // tke_sinhvien
+            // tke_khoa
             // 
-            this.tke_sinhvien.Name = "tke_sinhvien";
-            this.tke_sinhvien.Size = new System.Drawing.Size(248, 34);
-            this.tke_sinhvien.Text = "Sinh viên";
+            this.tke_khoa.Name = "tke_khoa";
+            this.tke_khoa.Size = new System.Drawing.Size(270, 34);
+            this.tke_khoa.Text = "Khoa";
+            this.tke_khoa.Click += new System.EventHandler(this.tke_khoa_Click);
             // 
             // tke_nganh
             // 
             this.tke_nganh.Name = "tke_nganh";
-            this.tke_nganh.Size = new System.Drawing.Size(248, 34);
+            this.tke_nganh.Size = new System.Drawing.Size(270, 34);
             this.tke_nganh.Text = "Ngành";
+            // 
+            // tke_sinhvien
+            // 
+            this.tke_sinhvien.Name = "tke_sinhvien";
+            this.tke_sinhvien.Size = new System.Drawing.Size(270, 34);
+            this.tke_sinhvien.Text = "Sinh viên";
             // 
             // tke_lop
             // 
             this.tke_lop.Name = "tke_lop";
-            this.tke_lop.Size = new System.Drawing.Size(248, 34);
+            this.tke_lop.Size = new System.Drawing.Size(270, 34);
             this.tke_lop.Text = "Lớp";
-            // 
-            // tke_khoa
-            // 
-            this.tke_khoa.Name = "tke_khoa";
-            this.tke_khoa.Size = new System.Drawing.Size(248, 34);
-            this.tke_khoa.Text = "Khoa";
             // 
             // tke_hososinhvien
             // 
             this.tke_hososinhvien.Name = "tke_hososinhvien";
-            this.tke_hososinhvien.Size = new System.Drawing.Size(248, 34);
+            this.tke_hososinhvien.Size = new System.Drawing.Size(270, 34);
             this.tke_hososinhvien.Text = "Hồ sơ sinh viên";
             // 
             // tke_hoadon
             // 
             this.tke_hoadon.Name = "tke_hoadon";
-            this.tke_hoadon.Size = new System.Drawing.Size(248, 34);
+            this.tke_hoadon.Size = new System.Drawing.Size(270, 34);
             this.tke_hoadon.Text = "Hóa đơn học phí";
             // 
             // tke_diemchuan
             // 
             this.tke_diemchuan.Name = "tke_diemchuan";
-            this.tke_diemchuan.Size = new System.Drawing.Size(248, 34);
+            this.tke_diemchuan.Size = new System.Drawing.Size(270, 34);
             this.tke_diemchuan.Text = "Điểm chuẩn";
             // 
             // tke_canbo
             // 
             this.tke_canbo.Name = "tke_canbo";
-            this.tke_canbo.Size = new System.Drawing.Size(248, 34);
+            this.tke_canbo.Size = new System.Drawing.Size(270, 34);
             this.tke_canbo.Text = "Cán bộ";
             // 
             // contextMenuStrip1

@@ -71,5 +71,11 @@ namespace BTL_QUANLYSINHVIEN
             FormQlyCanBo formCB=new FormQlyCanBo();
             formCB.ShowDialog();
         }
+
+        private void tke_khoa_Click(object sender, EventArgs e)
+        {
+            FormTkeKhoa formTkeKhoa=new FormTkeKhoa();
+            formTkeKhoa.ShowDialog();
+        }
     }
 }
