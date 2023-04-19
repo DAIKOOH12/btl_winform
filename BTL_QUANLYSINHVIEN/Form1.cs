@@ -77,5 +77,11 @@ namespace BTL_QUANLYSINHVIEN
             FormTkeKhoa formTkeKhoa=new FormTkeKhoa();
             formTkeKhoa.ShowDialog();
         }
+
+        private void tke_nganh_Click(object sender, EventArgs e)
+        {
+            FormTkeNganh formTkeNganh=new FormTkeNganh();
+            formTkeNganh.ShowDialog();
+        }
     }
 }

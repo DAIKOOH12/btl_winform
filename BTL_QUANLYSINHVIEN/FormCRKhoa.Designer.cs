@@ -40,7 +40,7 @@
             this.ctr_khoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ctr_khoa.Location = new System.Drawing.Point(0, 0);
             this.ctr_khoa.Name = "ctr_khoa";
-            this.ctr_khoa.Size = new System.Drawing.Size(873, 548);
+            this.ctr_khoa.Size = new System.Drawing.Size(1534, 842);
             this.ctr_khoa.TabIndex = 0;
             // 
             // crp_TkeKhoa
@@ -51,7 +51,7 @@
             this.crp_TkeKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crp_TkeKhoa.Location = new System.Drawing.Point(0, 0);
             this.crp_TkeKhoa.Name = "crp_TkeKhoa";
-            this.crp_TkeKhoa.Size = new System.Drawing.Size(873, 548);
+            this.crp_TkeKhoa.Size = new System.Drawing.Size(1534, 842);
             this.crp_TkeKhoa.TabIndex = 1;
             // 
             // FormCRKhoa
@@ -59,7 +59,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(873, 548);
+            this.ClientSize = new System.Drawing.Size(1534, 842);
             this.Controls.Add(this.crp_TkeKhoa);
             this.Controls.Add(this.ctr_khoa);
             this.Name = "FormCRKhoa";

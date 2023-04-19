@@ -174,6 +174,7 @@
             this.tke_nganh.Name = "tke_nganh";
             this.tke_nganh.Size = new System.Drawing.Size(270, 34);
             this.tke_nganh.Text = "Ngành";
+            this.tke_nganh.Click += new System.EventHandler(this.tke_nganh_Click);
             // 
             // tke_sinhvien
             // 

@@ -59,10 +59,21 @@
       <DependentUpon>CrystalReportKhoa.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReportNganh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportNganh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataSetKhoa.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetKhoa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetNganh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetNganh.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -75,6 +86,12 @@
     </Compile>
     <Compile Include="FormCRKhoa.Designer.cs">
       <DependentUpon>FormCRKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCRNganh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRNganh.Designer.cs">
+      <DependentUpon>FormCRNganh.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQLKhoa.cs">
       <SubType>Form</SubType>
@@ -178,17 +195,30 @@
     <Compile Include="FormTkeKhoa.Designer.cs">
       <DependentUpon>FormTkeKhoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTkeNganh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTkeNganh.Designer.cs">
+      <DependentUpon>FormTkeNganh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CrystalReportKhoa.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportKhoa.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportNganh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportNganh.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRKhoa.resx">
       <DependentUpon>FormCRKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRNganh.resx">
+      <DependentUpon>FormCRNganh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLKhoa.resx">
       <DependentUpon>FormQLKhoa.cs</DependentUpon>
@@ -241,6 +271,9 @@
     <EmbeddedResource Include="FormTkeKhoa.resx">
       <DependentUpon>FormTkeKhoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTkeNganh.resx">
+      <DependentUpon>FormTkeNganh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -261,6 +294,17 @@
     </None>
     <None Include="DataSetKhoa.xss">
       <DependentUpon>DataSetKhoa.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetNganh.xsc">
+      <DependentUpon>DataSetNganh.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetNganh.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetNganh.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetNganh.xss">
+      <DependentUpon>DataSetNganh.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
