@@ -71,6 +71,24 @@ namespace BTL_QUANLYSINHVIEN
                 crp.SetDataSource(ds.Tables[0]);
                 crp_TkeKhoa.ReportSource = crp;
             }
+            if (index == 4)
+            {
+                con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+                con.Open();
+                string query = $"sp_tongnganh";
+                SqlCommand cmd = new SqlCommand(query, con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                DataSet ds = new DataSet();
+                SqlDataAdapter adt = new SqlDataAdapter();
+                adt.SelectCommand = cmd;
+                ds.Clear();
+                adt.Fill(ds);
+                CrystalReportTongNganh crp = new CrystalReportTongNganh();
+                crp.SetDataSource(ds.Tables[0]);
+                crp_TkeKhoa.ReportSource = crp;
+            }
         }
     }
 }

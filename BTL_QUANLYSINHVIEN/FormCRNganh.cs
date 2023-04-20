@@ -32,12 +32,12 @@ namespace BTL_QUANLYSINHVIEN
                 con.Open();
                 string query = $"select * from tblNganh";
                 SqlCommand cmd = new SqlCommand(query, con);
+                DataTable dt=new DataTable();
                 SqlDataAdapter adt = new SqlDataAdapter();
                 adt.SelectCommand = cmd;
-                DataSet ds = new DataSet();
-                adt.Fill(ds);
-                CrystalReportNganh crp = new CrystalReportNganh();
-                crp.SetDataSource(ds.Tables[0]);
+                adt.Fill(dt);
+                CrystalReportNganh crp=new CrystalReportNganh();
+                crp.SetDataSource(dt);
                 crp_nganh.ReportSource = crp;
             }
             if(index == 2)
@@ -48,11 +48,11 @@ namespace BTL_QUANLYSINHVIEN
                 SqlCommand cmd = new SqlCommand(query, con);
                 SqlDataAdapter adt = new SqlDataAdapter();
                 adt.SelectCommand = cmd;
-                DataSet ds = new DataSet();
-                adt.Fill(ds);
+                DataTable dt=new DataTable();
+                adt.Fill(dt);
                 CrystalReportNganh crp = new CrystalReportNganh();
-                crp.SetDataSource(ds.Tables[0]);
-                crp_nganh.ReportSource = crp;
+                crp.SetDataSource(dt);
+                crp_nganh.ReportSource= crp;
             }
             if(index == 3)
             {
@@ -62,24 +62,10 @@ namespace BTL_QUANLYSINHVIEN
                 SqlCommand cmd = new SqlCommand(query, con);
                 SqlDataAdapter adt = new SqlDataAdapter();
                 adt.SelectCommand = cmd;
-                DataSet ds = new DataSet();
-                adt.Fill(ds);
+                DataTable dt = new DataTable();
+                adt.Fill(dt);
                 CrystalReportNganh crp = new CrystalReportNganh();
-                crp.SetDataSource(ds.Tables[0]);
-                crp_nganh.ReportSource = crp;
-            }
-            if (index == 4)
-            {
-                con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
-                con.Open();
-                string query = "select sMaKhoa, count(sMaNganh) as tong_so from tblNganh group by sMaKhoa";
-                SqlCommand cmd = new SqlCommand(query, con);
-                SqlDataAdapter adt = new SqlDataAdapter();
-                adt.SelectCommand = cmd;
-                DataSet ds = new DataSet();
-                adt.Fill(ds);
-                CrystalReportNganh crp = new CrystalReportNganh();
-                crp.SetDataSource(ds.Tables[0]);
+                crp.SetDataSource(dt);
                 crp_nganh.ReportSource = crp;
             }
         }

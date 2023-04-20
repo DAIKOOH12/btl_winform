@@ -65,6 +65,7 @@
             this.Name = "FormCRKhoa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCRKhoa";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormCRKhoa_Load);
             this.ResumeLayout(false);
 

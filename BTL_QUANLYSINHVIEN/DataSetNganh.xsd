@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsPropertyName="BTL_QuanLySinhVien_Nhom_G02ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BTL_QuanLySinhVien_Nhom_G02ConnectionString ()" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BTL_QuanLySinhVien_Nhom_G02ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BTL_QuanLySinhVien_Nhom_G02ConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BTL_QUANLYSINHVIEN.Properties.Settings.GlobalReference.Default.BTL_QuanLySinhVien_Nhom_G02ConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblNganhTableAdapter" GeneratorDataComponentClassName="tblNganhTableAdapter" Name="tblNganh" UserDataComponentName="tblNganhTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BTL_QuanLySinhVien_Nhom_G02ConnectionString ()" DbObjectName="BTL_QuanLySinhVien_Nhom_G02.dbo.tblNganh" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BTL_QuanLySinhVien_Nhom_G02ConnectionString1 (Settings)" DbObjectName="BTL_QuanLySinhVien_Nhom_G02.dbo.tblNganh" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tblNganh] WHERE (([sMaNganh] = @Original_sMaNganh) AND ((@IsNull_sTenNganh = 1 AND [sTenNganh] IS NULL) OR ([sTenNganh] = @Original_sTenNganh)) AND ([sMaKhoa] = @Original_sMaKhoa))</CommandText>
@@ -67,7 +67,7 @@ SELECT sMaNganh, sTenNganh, sMaKhoa FROM tblNganh WHERE (sMaNganh = @sMaNganh)</
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSetNganh" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetNganh" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetNganh">
+  <xs:element name="DataSetNganh" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetNganh" msprop:Generator_DataSetName="DataSetNganh">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="tblNganh" msprop:Generator_RowEvHandlerName="tblNganhRowChangeEventHandler" msprop:Generator_RowDeletedName="tblNganhRowDeleted" msprop:Generator_RowDeletingName="tblNganhRowDeleting" msprop:Generator_RowEvArgName="tblNganhRowChangeEvent" msprop:Generator_TablePropName="tblNganh" msprop:Generator_RowChangedName="tblNganhRowChanged" msprop:Generator_RowChangingName="tblNganhRowChanging" msprop:Generator_TableClassName="tblNganhDataTable" msprop:Generator_RowClassName="tblNganhRow" msprop:Generator_TableVarName="tabletblNganh" msprop:Generator_UserTableName="tblNganh">

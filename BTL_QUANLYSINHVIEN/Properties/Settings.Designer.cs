@@ -33,5 +33,16 @@ namespace BTL_QUANLYSINHVIEN.Properties {
                 return ((string)(this["BTL_QuanLySinhVien_Nhom_G02ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI-TRUONG\\SQLEXPRESS;Initial Catalog=BTL_QuanLySinhVien_Nhom_G02;Int" +
+            "egrated Security=True")]
+        public string BTL_QuanLySinhVien_Nhom_G02ConnectionString1 {
+            get {
+                return ((string)(this["BTL_QuanLySinhVien_Nhom_G02ConnectionString1"]));
+            }
+        }
     }
 }

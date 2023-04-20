@@ -41,13 +41,13 @@
             this.cb_loai.FormattingEnabled = true;
             this.cb_loai.Location = new System.Drawing.Point(295, 89);
             this.cb_loai.Name = "cb_loai";
-            this.cb_loai.Size = new System.Drawing.Size(160, 28);
+            this.cb_loai.Size = new System.Drawing.Size(265, 28);
             this.cb_loai.TabIndex = 6;
             this.cb_loai.SelectedIndexChanged += new System.EventHandler(this.cb_loai_SelectedIndexChanged);
             // 
             // btn_xuat
             // 
-            this.btn_xuat.Location = new System.Drawing.Point(508, 118);
+            this.btn_xuat.Location = new System.Drawing.Point(295, 228);
             this.btn_xuat.Name = "btn_xuat";
             this.btn_xuat.Size = new System.Drawing.Size(137, 35);
             this.btn_xuat.TabIndex = 5;
@@ -78,7 +78,7 @@
             this.tb_info.Enabled = false;
             this.tb_info.Location = new System.Drawing.Point(295, 159);
             this.tb_info.Name = "tb_info";
-            this.tb_info.Size = new System.Drawing.Size(160, 26);
+            this.tb_info.Size = new System.Drawing.Size(265, 26);
             this.tb_info.TabIndex = 7;
             // 
             // FormTkeKhoa

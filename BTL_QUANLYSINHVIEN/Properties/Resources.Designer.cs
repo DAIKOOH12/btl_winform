@@ -83,9 +83,39 @@ namespace BTL_QUANLYSINHVIEN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20ffd108a77083be691317c4ab01982e {
+            get {
+                object obj = ResourceManager.GetObject("20ffd108a77083be691317c4ab01982e", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _306009830_1502899793474605_7946496520904862648_n {
             get {
                 object obj = ResourceManager.GetObject("306009830_1502899793474605_7946496520904862648_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _318098595_718181749521622_2962253718451387023_n {
+            get {
+                object obj = ResourceManager.GetObject("318098595_718181749521622_2962253718451387023_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _340849414_943752853333754_3568810528558309995_n {
+            get {
+                object obj = ResourceManager.GetObject("340849414_943752853333754_3568810528558309995_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

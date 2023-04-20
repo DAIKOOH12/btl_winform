@@ -181,6 +181,7 @@
             this.tke_sinhvien.Name = "tke_sinhvien";
             this.tke_sinhvien.Size = new System.Drawing.Size(270, 34);
             this.tke_sinhvien.Text = "Sinh viên";
+            this.tke_sinhvien.Click += new System.EventHandler(this.tke_sinhvien_Click);
             // 
             // tke_lop
             // 
@@ -234,7 +235,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.BackgroundImage = global::BTL_QUANLYSINHVIEN.Properties.Resources.mattroithieuruihanhtinhjpg1resize_6c46e;
+            this.panel1.BackgroundImage = global::BTL_QUANLYSINHVIEN.Properties.Resources._340849414_943752853333754_3568810528558309995_n;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Location = new System.Drawing.Point(0, 169);

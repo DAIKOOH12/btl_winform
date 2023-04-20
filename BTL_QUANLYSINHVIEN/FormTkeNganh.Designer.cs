@@ -46,12 +46,12 @@
             // cb_loai
             // 
             this.cb_loai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_loai.ForeColor = System.Drawing.Color.Black;
             this.cb_loai.FormattingEnabled = true;
             this.cb_loai.Items.AddRange(new object[] {
             "Toàn bộ",
             "Theo tên ngành",
-            "Theo khoa",
-            "Số lượng ngành theo từng khoa"});
+            "Theo khoa"});
             this.cb_loai.Location = new System.Drawing.Point(465, 231);
             this.cb_loai.Name = "cb_loai";
             this.cb_loai.Size = new System.Drawing.Size(160, 28);

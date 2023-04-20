@@ -37,9 +37,18 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +62,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReportHocSinh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportHocSinh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportHSTheoSV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportHSTheoSV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReportKhoa.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,6 +85,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportNganh.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportTongNganh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportTongNganh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetHS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetHSTheoSV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHSTheoSV.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSetKhoa.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -80,6 +117,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCRHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRHocSinh.Designer.cs">
+      <DependentUpon>FormCRHocSinh.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCRKhoa.cs">
       <SubType>Form</SubType>
@@ -189,6 +232,12 @@
     <Compile Include="FormSuaThongTinSV.Designer.cs">
       <DependentUpon>FormSuaThongTinSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTKeHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTKeHocSinh.Designer.cs">
+      <DependentUpon>FormTKeHocSinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTkeKhoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +252,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TongNganhTheoKhoa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TongNganhTheoKhoa.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrystalReportHocSinh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportHocSinh.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportHSTheoSV.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportHSTheoSV.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportKhoa.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportKhoa.cs</LastGenOutput>
@@ -211,8 +273,15 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportNganh.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportTongNganh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportTongNganh.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRHocSinh.resx">
+      <DependentUpon>FormCRHocSinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRKhoa.resx">
       <DependentUpon>FormCRKhoa.cs</DependentUpon>
@@ -268,6 +337,9 @@
     <EmbeddedResource Include="FormSuaThongTinSV.resx">
       <DependentUpon>FormSuaThongTinSV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTKeHocSinh.resx">
+      <DependentUpon>FormTKeHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTkeKhoa.resx">
       <DependentUpon>FormTkeKhoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,13 +356,35 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSetHS.xsc">
+      <DependentUpon>DataSetHS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetHS.xss">
+      <DependentUpon>DataSetHS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHSTheoSV.xsc">
+      <DependentUpon>DataSetHSTheoSV.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHSTheoSV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHSTheoSV.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetHSTheoSV.xss">
+      <DependentUpon>DataSetHSTheoSV.xsd</DependentUpon>
+    </None>
     <None Include="DataSetKhoa.xsc">
       <DependentUpon>DataSetKhoa.xsd</DependentUpon>
     </None>
     <None Include="DataSetKhoa.xsd">
-      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSetKhoa.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="DataSetKhoa.xss">
       <DependentUpon>DataSetKhoa.xsd</DependentUpon>
@@ -306,6 +400,7 @@
     <None Include="DataSetNganh.xss">
       <DependentUpon>DataSetNganh.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -315,6 +410,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TongNganhTheoKhoa.xsc">
+      <DependentUpon>TongNganhTheoKhoa.xsd</DependentUpon>
+    </None>
+    <None Include="TongNganhTheoKhoa.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TongNganhTheoKhoa.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TongNganhTheoKhoa.xss">
+      <DependentUpon>TongNganhTheoKhoa.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -341,7 +447,17 @@
     <None Include="Resources\mattroithieuruihanhtinhjpg1resize_6c46e.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\318098595_718181749521622_2962253718451387023_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20ffd108a77083be691317c4ab01982e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\340849414_943752853333754_3568810528558309995_n.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

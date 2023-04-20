@@ -14,11 +14,12 @@ namespace BTL_QUANLYSINHVIEN
     {
         private int index = 0;
         
+        
         private void loadData()
         {
             this.Controls.Clear();
             this.InitializeComponent();
-            string[] items = { "Toàn bộ", "Theo tên", "Theo địa chỉ" };
+            string[] items = { "Toàn bộ", "Theo tên", "Theo địa chỉ","Tổng số ngành theo từng khoa"};
             
             cb_loai.DataSource= items;
         }
@@ -65,6 +66,12 @@ namespace BTL_QUANLYSINHVIEN
                     FormCRKhoa formTkeKhoa = new FormCRKhoa(index, tb_info.Text);
                     formTkeKhoa.ShowDialog();
                 }
+            }
+            else if (String.Compare(loai, "Tổng số ngành theo từng khoa") == 0)
+            {
+                    index = 4;
+                    FormCRKhoa formTkeKhoa = new FormCRKhoa(index, tb_info.Text);
+                    formTkeKhoa.ShowDialog();
             }
             loadData();
         }
