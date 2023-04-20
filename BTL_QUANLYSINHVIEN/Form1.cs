@@ -89,5 +89,11 @@ namespace BTL_QUANLYSINHVIEN
             FormTKeHocSinh formHS=new FormTKeHocSinh();
             formHS.ShowDialog();
         }
+
+        private void tke_lop_Click(object sender, EventArgs e)
+        {
+            FormTkeLop formLop = new FormTkeLop();
+            formLop.ShowDialog();
+        }
     }
 }

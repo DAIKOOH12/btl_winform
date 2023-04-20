@@ -188,6 +188,7 @@
             this.tke_lop.Name = "tke_lop";
             this.tke_lop.Size = new System.Drawing.Size(270, 34);
             this.tke_lop.Text = "Lớp";
+            this.tke_lop.Click += new System.EventHandler(this.tke_lop_Click);
             // 
             // tke_hososinhvien
             // 
