@@ -57,6 +57,20 @@ namespace BTL_QUANLYSINHVIEN
                 crp.SetDataSource(dt);
                 crp_lop.ReportSource = crp;
             }
+            if (index == 3)
+            {
+                con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+                con.Open();
+                string query = "select * from vv_SiSoTungLop";
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataAdapter adt = new SqlDataAdapter();
+                DataTable dt = new DataTable();
+                adt.SelectCommand = cmd;
+                adt.Fill(dt);
+                CrystalReportSiSoTheoLop crp=new CrystalReportSiSoTheoLop();
+                crp.SetDataSource(dt);
+                crp_lop.ReportSource= crp;
+            }
         }
     }
 }

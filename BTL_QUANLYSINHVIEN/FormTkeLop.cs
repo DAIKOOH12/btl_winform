@@ -20,7 +20,7 @@ namespace BTL_QUANLYSINHVIEN
         {
             this.Controls.Clear();
             this.InitializeComponent();
-            string[] items = { "Toàn bộ", "Thông tin sinh viên theo từng lớp"};
+            string[] items = { "Toàn bộ", "Thông tin sinh viên theo từng lớp","Sĩ số sinh viên theo từng lớp"};
 
             cb_loai.DataSource = items;
         }
@@ -57,6 +57,12 @@ namespace BTL_QUANLYSINHVIEN
                         FormCRLop formCRLop = new FormCRLop(index, info);
                         formCRLop.ShowDialog();
                     }
+                }
+                if (String.Compare(cb_loai.Text, "Sĩ số sinh viên theo từng lớp") == 0)
+                {
+                    index = 3;
+                    FormCRLop formCRLop = new FormCRLop(index, info);
+                    formCRLop.ShowDialog();
                 }
             }
             loadData();

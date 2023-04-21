@@ -92,6 +92,12 @@
       <DependentUpon>CrystalReportNganh.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReportSiSoTheoLop.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportSiSoTheoLop.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReportTongNganh.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -128,6 +134,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetNganh.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetSiSoTheoLop.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetSiSoTheoLop.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSetTTSVTheoLop.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -311,6 +322,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportNganh.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportSiSoTheoLop.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportSiSoTheoLop.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportTongNganh.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportTongNganh.cs</LastGenOutput>
@@ -458,6 +473,17 @@
     </None>
     <None Include="DataSetNganh.xss">
       <DependentUpon>DataSetNganh.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetSiSoTheoLop.xsc">
+      <DependentUpon>DataSetSiSoTheoLop.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetSiSoTheoLop.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetSiSoTheoLop.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetSiSoTheoLop.xss">
+      <DependentUpon>DataSetSiSoTheoLop.xsd</DependentUpon>
     </None>
     <None Include="DataSetTTSVTheoLop.xsc">
       <DependentUpon>DataSetTTSVTheoLop.xsd</DependentUpon>
