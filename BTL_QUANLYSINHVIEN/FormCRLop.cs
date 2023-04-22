@@ -71,6 +71,22 @@ namespace BTL_QUANLYSINHVIEN
                 crp.SetDataSource(dt);
                 crp_lop.ReportSource= crp;
             }
+            if (index == 4)
+            {
+                con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+                con.Open();
+                SqlCommand cmd = new SqlCommand("sp_HienSVTheoLop", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                SqlDataAdapter adt = new SqlDataAdapter();
+                DataTable dt = new DataTable();
+                adt.SelectCommand = cmd;
+                adt.Fill(dt);
+                CrystalReportHsTheoLop crp = new CrystalReportHsTheoLop();
+                crp.SetDataSource(dt);
+                crp_lop.ReportSource = crp;
+            }
         }
     }
 }

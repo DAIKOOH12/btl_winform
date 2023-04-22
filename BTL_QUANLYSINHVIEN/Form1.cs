@@ -95,5 +95,29 @@ namespace BTL_QUANLYSINHVIEN
             FormTkeLop formLop = new FormTkeLop();
             formLop.ShowDialog();
         }
+
+        private void tke_hososinhvien_Click(object sender, EventArgs e)
+        {
+            FormTkeHoSoSinhVien formHSSV=new FormTkeHoSoSinhVien();
+            formHSSV.ShowDialog();
+        }
+
+        private void tke_hoadon_Click(object sender, EventArgs e)
+        {
+            FormTkeHDHP formTkeHDHP=new FormTkeHDHP();
+            formTkeHDHP.ShowDialog();
+        }
+
+        private void tke_diemchuan_Click(object sender, EventArgs e)
+        {
+            FormTkeDiemChuan formDiemChuan=new FormTkeDiemChuan();
+            formDiemChuan.ShowDialog();
+        }
+
+        private void tke_canbo_Click(object sender, EventArgs e)
+        {
+            FormTkeCanBo formCB = new FormTkeCanBo();
+            formCB.ShowDialog();
+        }
     }
 }

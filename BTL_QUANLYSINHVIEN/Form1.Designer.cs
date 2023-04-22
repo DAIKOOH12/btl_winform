@@ -195,24 +195,28 @@
             this.tke_hososinhvien.Name = "tke_hososinhvien";
             this.tke_hososinhvien.Size = new System.Drawing.Size(270, 34);
             this.tke_hososinhvien.Text = "Hồ sơ sinh viên";
+            this.tke_hososinhvien.Click += new System.EventHandler(this.tke_hososinhvien_Click);
             // 
             // tke_hoadon
             // 
             this.tke_hoadon.Name = "tke_hoadon";
             this.tke_hoadon.Size = new System.Drawing.Size(270, 34);
             this.tke_hoadon.Text = "Hóa đơn học phí";
+            this.tke_hoadon.Click += new System.EventHandler(this.tke_hoadon_Click);
             // 
             // tke_diemchuan
             // 
             this.tke_diemchuan.Name = "tke_diemchuan";
             this.tke_diemchuan.Size = new System.Drawing.Size(270, 34);
             this.tke_diemchuan.Text = "Điểm chuẩn";
+            this.tke_diemchuan.Click += new System.EventHandler(this.tke_diemchuan_Click);
             // 
             // tke_canbo
             // 
             this.tke_canbo.Name = "tke_canbo";
             this.tke_canbo.Size = new System.Drawing.Size(270, 34);
             this.tke_canbo.Text = "Cán bộ";
+            this.tke_canbo.Click += new System.EventHandler(this.tke_canbo_Click);
             // 
             // contextMenuStrip1
             // 

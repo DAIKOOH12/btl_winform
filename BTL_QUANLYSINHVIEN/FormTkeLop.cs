@@ -20,7 +20,7 @@ namespace BTL_QUANLYSINHVIEN
         {
             this.Controls.Clear();
             this.InitializeComponent();
-            string[] items = { "Toàn bộ", "Thông tin sinh viên theo từng lớp","Sĩ số sinh viên theo từng lớp"};
+            string[] items = { "Toàn bộ", "Thông tin sinh viên các lớp","Sĩ số sinh viên theo từng lớp","Thông tin sinh viên theo từng lớp"};
 
             cb_loai.DataSource = items;
         }
@@ -45,7 +45,7 @@ namespace BTL_QUANLYSINHVIEN
                     FormCRLop formCRLop = new FormCRLop(index,info);
                     formCRLop.ShowDialog();
                 }
-                if (String.Compare(cb_loai.Text, "Thông tin sinh viên theo từng lớp") == 0)
+                if (String.Compare(cb_loai.Text, "Thông tin sinh viên các lớp") == 0)
                 {
                     if (String.IsNullOrEmpty(tb_info.Text))
                     {
@@ -58,9 +58,15 @@ namespace BTL_QUANLYSINHVIEN
                         formCRLop.ShowDialog();
                     }
                 }
-                if (String.Compare(cb_loai.Text, "Sĩ số sinh viên theo từng lớp") == 0)
+                if (String.Compare(cb_loai.Text, "Sĩ số sinh viên các lớp") == 0)
                 {
                     index = 3;
+                    FormCRLop formCRLop = new FormCRLop(index, info);
+                    formCRLop.ShowDialog();
+                }
+                if (String.Compare(cb_loai.Text, "Thông tin sinh viên theo từng lớp") == 0)
+                {
+                    index = 4;
                     FormCRLop formCRLop = new FormCRLop(index, info);
                     formCRLop.ShowDialog();
                 }
@@ -70,7 +76,7 @@ namespace BTL_QUANLYSINHVIEN
 
         private void cb_loai_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (String.Compare(cb_loai.Text, "Thông tin sinh viên theo từng lớp") == 0)
+            if (String.Compare(cb_loai.Text, "Thông tin sinh viên các lớp") == 0)
             {
                 tb_info.Enabled = true;
             }

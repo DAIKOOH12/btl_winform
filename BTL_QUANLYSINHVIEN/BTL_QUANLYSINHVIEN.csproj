@@ -62,10 +62,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReportCanBo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportCanBo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportDiemChuan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportDiemChuan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportHDHP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportHDHP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReportHocSinh.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportHocSinh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportHSSV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportHSSV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportHsTheoLop.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportHsTheoLop.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReportHSTheoSV.cs">
@@ -110,10 +140,35 @@
       <DependentUpon>CrystalReportTTSVTheoLop.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DataSetCanBo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCanBo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetDiemChuan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDiemChuan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetHDHP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHDHP.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetHS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetHS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetHSSV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHSSV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetHSTheoLop.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHSTheoLop.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSetHSTheoSV.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -151,11 +206,35 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCRCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRCanBo.Designer.cs">
+      <DependentUpon>FormCRCanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCRDiemChuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRDiemChuan.Designer.cs">
+      <DependentUpon>FormCRDiemChuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCRHDHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRHDHP.Designer.cs">
+      <DependentUpon>FormCRHDHP.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCRHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCRHocSinh.Designer.cs">
       <DependentUpon>FormCRHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCRHSSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRHSSV.Designer.cs">
+      <DependentUpon>FormCRHSSV.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCRKhoa.cs">
       <SubType>Form</SubType>
@@ -271,11 +350,35 @@
     <Compile Include="FormSuaThongTinSV.Designer.cs">
       <DependentUpon>FormSuaThongTinSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTkeCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTkeCanBo.Designer.cs">
+      <DependentUpon>FormTkeCanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTkeDiemChuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTkeDiemChuan.Designer.cs">
+      <DependentUpon>FormTkeDiemChuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTkeHDHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTkeHDHP.Designer.cs">
+      <DependentUpon>FormTkeHDHP.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTKeHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTKeHocSinh.Designer.cs">
       <DependentUpon>FormTKeHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTkeHoSoSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTkeHoSoSinhVien.Designer.cs">
+      <DependentUpon>FormTkeHoSoSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTkeKhoa.cs">
       <SubType>Form</SubType>
@@ -302,9 +405,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TongNganhTheoKhoa.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CrystalReportCanBo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportCanBo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportDiemChuan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportDiemChuan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportHDHP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportHDHP.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportHocSinh.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportHocSinh.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportHSSV.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportHSSV.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportHsTheoLop.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportHsTheoLop.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportHSTheoSV.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -337,8 +460,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCRCanBo.resx">
+      <DependentUpon>FormCRCanBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRDiemChuan.resx">
+      <DependentUpon>FormCRDiemChuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRHDHP.resx">
+      <DependentUpon>FormCRHDHP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCRHocSinh.resx">
       <DependentUpon>FormCRHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRHSSV.resx">
+      <DependentUpon>FormCRHSSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRKhoa.resx">
       <DependentUpon>FormCRKhoa.cs</DependentUpon>
@@ -397,8 +532,20 @@
     <EmbeddedResource Include="FormSuaThongTinSV.resx">
       <DependentUpon>FormSuaThongTinSV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTkeCanBo.resx">
+      <DependentUpon>FormTkeCanBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTkeDiemChuan.resx">
+      <DependentUpon>FormTkeDiemChuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTkeHDHP.resx">
+      <DependentUpon>FormTkeHDHP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTKeHocSinh.resx">
       <DependentUpon>FormTKeHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTkeHoSoSinhVien.resx">
+      <DependentUpon>FormTkeHoSoSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTkeKhoa.resx">
       <DependentUpon>FormTkeKhoa.cs</DependentUpon>
@@ -419,6 +566,39 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSetCanBo.xsc">
+      <DependentUpon>DataSetCanBo.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCanBo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCanBo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetCanBo.xss">
+      <DependentUpon>DataSetCanBo.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetDiemChuan.xsc">
+      <DependentUpon>DataSetDiemChuan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetDiemChuan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDiemChuan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetDiemChuan.xss">
+      <DependentUpon>DataSetDiemChuan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHDHP.xsc">
+      <DependentUpon>DataSetHDHP.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHDHP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHDHP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetHDHP.xss">
+      <DependentUpon>DataSetHDHP.xsd</DependentUpon>
+    </None>
     <None Include="DataSetHS.xsc">
       <DependentUpon>DataSetHS.xsd</DependentUpon>
     </None>
@@ -429,6 +609,28 @@
     </None>
     <None Include="DataSetHS.xss">
       <DependentUpon>DataSetHS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHSSV.xsc">
+      <DependentUpon>DataSetHSSV.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHSSV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHSSV.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetHSSV.xss">
+      <DependentUpon>DataSetHSSV.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHSTheoLop.xsc">
+      <DependentUpon>DataSetHSTheoLop.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHSTheoLop.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHSTheoLop.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetHSTheoLop.xss">
+      <DependentUpon>DataSetHSTheoLop.xsd</DependentUpon>
     </None>
     <None Include="DataSetHSTheoSV.xsc">
       <DependentUpon>DataSetHSTheoSV.xsd</DependentUpon>
