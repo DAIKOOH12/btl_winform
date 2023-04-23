@@ -16,14 +16,14 @@ namespace BTL_QUANLYSINHVIEN {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReportLop : ReportClass {
+    public class CrystalReportTTNganhTheoKHoa : ReportClass {
         
-        public CrystalReportLop() {
+        public CrystalReportTTNganhTheoKHoa() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReportLop.rpt";
+                return "CrystalReportTTNganhTheoKHoa.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace BTL_QUANLYSINHVIEN {
         
         public override string FullResourceName {
             get {
-                return "BTL_QUANLYSINHVIEN.CrystalReportLop.rpt";
+                return "BTL_QUANLYSINHVIEN.CrystalReportTTNganhTheoKHoa.rpt";
             }
             set {
                 // Do nothing
@@ -87,20 +87,12 @@ namespace BTL_QUANLYSINHVIEN {
                 return this.ReportDefinition.Sections[4];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_TruongKhoa {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReportLop : Component, ICachedReport {
+    public class CachedCrystalReportTTNganhTheoKHoa : Component, ICachedReport {
         
-        public CachedCrystalReportLop() {
+        public CachedCrystalReportTTNganhTheoKHoa() {
         }
         
         [Browsable(false)]
@@ -137,7 +129,7 @@ namespace BTL_QUANLYSINHVIEN {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReportLop rpt = new CrystalReportLop();
+            CrystalReportTTNganhTheoKHoa rpt = new CrystalReportTTNganhTheoKHoa();
             rpt.Site = this.Site;
             return rpt;
         }

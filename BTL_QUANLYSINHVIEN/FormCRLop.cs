@@ -38,6 +38,7 @@ namespace BTL_QUANLYSINHVIEN
                 adt.Fill(dt);
                 CrystalReportLop crp = new CrystalReportLop();
                 crp.SetDataSource(dt);
+                crp.SetParameterValue("TruongKhoa","nnn");
                 crp_lop.ReportSource = crp;
             }
             if (index == 2)
@@ -85,6 +86,7 @@ namespace BTL_QUANLYSINHVIEN
                 adt.Fill(dt);
                 CrystalReportHsTheoLop crp = new CrystalReportHsTheoLop();
                 crp.SetDataSource(dt);
+                crp.SetParameterValue("TruongKhoa", "Phạm Duy Trường");
                 crp_lop.ReportSource = crp;
             }
         }

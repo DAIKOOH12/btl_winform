@@ -89,6 +89,24 @@ namespace BTL_QUANLYSINHVIEN
                 crp.SetDataSource(ds.Tables[0]);
                 crp_TkeKhoa.ReportSource = crp;
             }
+            if (index == 5)
+            {
+                con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+                con.Open();
+                string query = $"sp_TTNganhTheoKhoa";
+                SqlCommand cmd = new SqlCommand(query, con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                cmd.Parameters.Add("@makhoa", SqlDbType.VarChar).Value = info;
+                SqlDataAdapter adt = new SqlDataAdapter();
+                DataTable dt = new DataTable();
+                adt.SelectCommand = cmd;
+                adt.Fill(dt);
+                CrystalReportTTNganhTheoKHoa crp = new CrystalReportTTNganhTheoKHoa();
+                crp.SetDataSource(dt);
+                crp_TkeKhoa.ReportSource = crp;
+            }
         }
     }
 }

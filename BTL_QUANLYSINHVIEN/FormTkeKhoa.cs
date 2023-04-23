@@ -19,7 +19,7 @@ namespace BTL_QUANLYSINHVIEN
         {
             this.Controls.Clear();
             this.InitializeComponent();
-            string[] items = { "Toàn bộ", "Theo tên", "Theo địa chỉ","Tổng số ngành theo từng khoa"};
+            string[] items = { "Toàn bộ", "Theo tên", "Theo địa chỉ","Tổng số ngành theo từng khoa","Thông tin ngành theo khoa"};
             
             cb_loai.DataSource= items;
         }
@@ -73,12 +73,25 @@ namespace BTL_QUANLYSINHVIEN
                     FormCRKhoa formTkeKhoa = new FormCRKhoa(index, tb_info.Text);
                     formTkeKhoa.ShowDialog();
             }
+            else if (String.Compare(loai, "Thông tin ngành theo khoa") == 0)
+            {
+                if (String.IsNullOrEmpty(tb_info.Text))
+                {
+                    MessageBox.Show("Cần nhập thông tin đầy đủ");
+                }
+                else
+                {
+                    index = 5;
+                    FormCRKhoa formTkeKhoa = new FormCRKhoa(index, tb_info.Text);
+                    formTkeKhoa.ShowDialog();
+                }
+            }
             loadData();
         }
 
         private void cb_loai_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (String.Compare(cb_loai.Text, "Theo tên") == 0|| String.Compare(cb_loai.Text, "Theo địa chỉ") == 0)
+            if (String.Compare(cb_loai.Text, "Theo tên") == 0|| String.Compare(cb_loai.Text, "Theo địa chỉ") == 0|| String.Compare(cb_loai.Text, "Thông tin ngành theo khoa") == 0)
             {
                 tb_info.Enabled = true;
             }

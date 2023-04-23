@@ -134,6 +134,12 @@
       <DependentUpon>CrystalReportTongNganh.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReportTTNganhTheoKHoa.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportTTNganhTheoKHoa.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReportTTSVTheoLop.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -194,6 +200,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetSiSoTheoLop.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTTNganhTheoKhoa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTTNganhTheoKhoa.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSetTTSVTheoLop.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -453,6 +464,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportTongNganh.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportTTNganhTheoKHoa.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportTTNganhTheoKHoa.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportTTSVTheoLop.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportTTSVTheoLop.cs</LastGenOutput>
@@ -686,6 +701,17 @@
     </None>
     <None Include="DataSetSiSoTheoLop.xss">
       <DependentUpon>DataSetSiSoTheoLop.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTTNganhTheoKhoa.xsc">
+      <DependentUpon>DataSetTTNganhTheoKhoa.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTTNganhTheoKhoa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTTNganhTheoKhoa.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTTNganhTheoKhoa.xss">
+      <DependentUpon>DataSetTTNganhTheoKhoa.xsd</DependentUpon>
     </None>
     <None Include="DataSetTTSVTheoLop.xsc">
       <DependentUpon>DataSetTTSVTheoLop.xsd</DependentUpon>
