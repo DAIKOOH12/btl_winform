@@ -58,8 +58,10 @@ namespace BTL_QUANLYSINHVIEN
             }
             try
             {
-                string query = "select * from tblHoSoSinhVien";
-                SqlCommand cmd = new SqlCommand(query, con);
+                SqlCommand cmd = new SqlCommand("sp_selHSSV", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 SqlDataAdapter adt = new SqlDataAdapter();
                 adt.SelectCommand = cmd;
                 dsHS.Clear();
@@ -97,6 +99,7 @@ namespace BTL_QUANLYSINHVIEN
         {
             loadData();
             dgv_hoso.ReadOnly = true;
+            
         }
 
         private void dgv_hoso_CellClick(object sender, DataGridViewCellEventArgs e)

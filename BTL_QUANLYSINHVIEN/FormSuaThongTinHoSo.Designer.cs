@@ -70,6 +70,7 @@
             // 
             // dtp_gui
             // 
+            this.dtp_gui.CustomFormat = "";
             this.dtp_gui.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_gui.Location = new System.Drawing.Point(662, 134);
             this.dtp_gui.Name = "dtp_gui";
@@ -78,6 +79,7 @@
             // 
             // dtp_thu
             // 
+            this.dtp_thu.CustomFormat = "";
             this.dtp_thu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_thu.Location = new System.Drawing.Point(662, 88);
             this.dtp_thu.Name = "dtp_thu";

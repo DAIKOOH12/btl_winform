@@ -103,14 +103,14 @@ namespace BTL_QUANLYSINHVIEN
                 con.Open();
                 if (!String.IsNullOrEmpty(tb_makhoa.Text))
                 {
-                    string ma_khoa = tb_makhoa.Text;
-                    string query_select = $"Select * from tblKhoa where sMaKhoa='{ma_khoa}'";
-                    SqlCommand cmd = new SqlCommand(query_select, con);
+                    string ma_khoa = tb_makhoa.Text;//Lấy giá trị text từ textbox
+                    string query_select = $"Select * from tblKhoa where sMaKhoa='{ma_khoa}'";//Khởi tạo câu truy vấn theo chuỗi trên
+                    SqlCommand cmd = new SqlCommand(query_select, con);//Khởi tạo cmd
                     SqlDataAdapter adt = new SqlDataAdapter();
                     adt.SelectCommand= cmd;
                     dt_check.Clear();
-                    adt.Fill(dt_check);
-                    if (dt_check.Rows.Count>=1)
+                    adt.Fill(dt_check);//Gán giá chị từ adapter vào datatable
+                    if (dt_check.Rows.Count>=1)//Kiểm xem có dữ liệu từ datatable ko
                     {
                         errorProvider1.SetError(tb_makhoa, "Mã khoa đã tồn tại");
                     }

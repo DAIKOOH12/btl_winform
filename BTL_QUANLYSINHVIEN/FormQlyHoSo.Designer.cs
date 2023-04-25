@@ -48,6 +48,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cb_canbo = new System.Windows.Forms.ComboBox();
             this.dgv_hoso = new System.Windows.Forms.DataGridView();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_fix = new System.Windows.Forms.Button();
+            this.btn_find = new System.Windows.Forms.Button();
+            this.btn_tiep = new System.Windows.Forms.Button();
             this.sMaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sHoKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iNamTotNghiep = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,12 +63,7 @@
             this.dThoiGianGui = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sSoBD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sMaCB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btn_xoa = new System.Windows.Forms.Button();
-            this.btn_fix = new System.Windows.Forms.Button();
-            this.btn_find = new System.Windows.Forms.Button();
-            this.btn_tiep = new System.Windows.Forms.Button();
+            this.thoi_gian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_hoso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -150,6 +151,7 @@
             // 
             // dtp_thu
             // 
+            this.dtp_thu.CustomFormat = "";
             this.dtp_thu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_thu.Location = new System.Drawing.Point(589, 71);
             this.dtp_thu.Name = "dtp_thu";
@@ -176,6 +178,7 @@
             // 
             // dtp_gui
             // 
+            this.dtp_gui.CustomFormat = "";
             this.dtp_gui.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_gui.Location = new System.Drawing.Point(589, 117);
             this.dtp_gui.Name = "dtp_gui";
@@ -231,7 +234,8 @@
             this.dThoiGianThu,
             this.dThoiGianGui,
             this.sSoBD,
-            this.sMaCB});
+            this.sMaCB,
+            this.thoi_gian});
             this.dgv_hoso.Location = new System.Drawing.Point(62, 331);
             this.dgv_hoso.Name = "dgv_hoso";
             this.dgv_hoso.RowHeadersWidth = 62;
@@ -239,6 +243,60 @@
             this.dgv_hoso.Size = new System.Drawing.Size(1416, 365);
             this.dgv_hoso.TabIndex = 4;
             this.dgv_hoso.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_hoso_CellClick);
+            // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(899, 65);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(110, 38);
+            this.btn_add.TabIndex = 5;
+            this.btn_add.Text = "Thêm mới";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // btn_xoa
+            // 
+            this.btn_xoa.Location = new System.Drawing.Point(899, 120);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(110, 38);
+            this.btn_xoa.TabIndex = 5;
+            this.btn_xoa.Text = "Xóa";
+            this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            // 
+            // btn_fix
+            // 
+            this.btn_fix.Location = new System.Drawing.Point(1015, 67);
+            this.btn_fix.Name = "btn_fix";
+            this.btn_fix.Size = new System.Drawing.Size(110, 38);
+            this.btn_fix.TabIndex = 5;
+            this.btn_fix.Text = "Cập nhật";
+            this.btn_fix.UseVisualStyleBackColor = true;
+            this.btn_fix.Click += new System.EventHandler(this.btn_fix_Click);
+            // 
+            // btn_find
+            // 
+            this.btn_find.Location = new System.Drawing.Point(1015, 120);
+            this.btn_find.Name = "btn_find";
+            this.btn_find.Size = new System.Drawing.Size(110, 38);
+            this.btn_find.TabIndex = 5;
+            this.btn_find.Text = "Tìm kiếm";
+            this.btn_find.UseVisualStyleBackColor = true;
+            this.btn_find.Click += new System.EventHandler(this.btn_find_Click);
+            // 
+            // btn_tiep
+            // 
+            this.btn_tiep.Location = new System.Drawing.Point(957, 169);
+            this.btn_tiep.Name = "btn_tiep";
+            this.btn_tiep.Size = new System.Drawing.Size(110, 38);
+            this.btn_tiep.TabIndex = 5;
+            this.btn_tiep.Text = "Tiếp tục";
+            this.btn_tiep.UseVisualStyleBackColor = true;
+            this.btn_tiep.Click += new System.EventHandler(this.btn_tiep_Click);
             // 
             // sMaHS
             // 
@@ -303,59 +361,12 @@
             this.sMaCB.MinimumWidth = 8;
             this.sMaCB.Name = "sMaCB";
             // 
-            // btn_add
+            // thoi_gian
             // 
-            this.btn_add.Location = new System.Drawing.Point(899, 65);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(110, 38);
-            this.btn_add.TabIndex = 5;
-            this.btn_add.Text = "Thêm mới";
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // btn_xoa
-            // 
-            this.btn_xoa.Location = new System.Drawing.Point(899, 120);
-            this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(110, 38);
-            this.btn_xoa.TabIndex = 5;
-            this.btn_xoa.Text = "Xóa";
-            this.btn_xoa.UseVisualStyleBackColor = true;
-            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
-            // 
-            // btn_fix
-            // 
-            this.btn_fix.Location = new System.Drawing.Point(1015, 67);
-            this.btn_fix.Name = "btn_fix";
-            this.btn_fix.Size = new System.Drawing.Size(110, 38);
-            this.btn_fix.TabIndex = 5;
-            this.btn_fix.Text = "Cập nhật";
-            this.btn_fix.UseVisualStyleBackColor = true;
-            this.btn_fix.Click += new System.EventHandler(this.btn_fix_Click);
-            // 
-            // btn_find
-            // 
-            this.btn_find.Location = new System.Drawing.Point(1015, 120);
-            this.btn_find.Name = "btn_find";
-            this.btn_find.Size = new System.Drawing.Size(110, 38);
-            this.btn_find.TabIndex = 5;
-            this.btn_find.Text = "Tìm kiếm";
-            this.btn_find.UseVisualStyleBackColor = true;
-            this.btn_find.Click += new System.EventHandler(this.btn_find_Click);
-            // 
-            // btn_tiep
-            // 
-            this.btn_tiep.Location = new System.Drawing.Point(957, 169);
-            this.btn_tiep.Name = "btn_tiep";
-            this.btn_tiep.Size = new System.Drawing.Size(110, 38);
-            this.btn_tiep.TabIndex = 5;
-            this.btn_tiep.Text = "Tiếp tục";
-            this.btn_tiep.UseVisualStyleBackColor = true;
-            this.btn_tiep.Click += new System.EventHandler(this.btn_tiep_Click);
+            this.thoi_gian.DataPropertyName = "thoi_gian";
+            this.thoi_gian.HeaderText = "Số ngày gửi";
+            this.thoi_gian.MinimumWidth = 8;
+            this.thoi_gian.Name = "thoi_gian";
             // 
             // FormQlyHoSo
             // 
@@ -418,6 +429,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cb_canbo;
         private System.Windows.Forms.DataGridView dgv_hoso;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btn_xoa;
+        private System.Windows.Forms.Button btn_fix;
+        private System.Windows.Forms.Button btn_find;
+        private System.Windows.Forms.Button btn_tiep;
         private System.Windows.Forms.DataGridViewTextBoxColumn sMaHS;
         private System.Windows.Forms.DataGridViewTextBoxColumn sHoKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn iNamTotNghiep;
@@ -427,11 +444,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dThoiGianGui;
         private System.Windows.Forms.DataGridViewTextBoxColumn sSoBD;
         private System.Windows.Forms.DataGridViewTextBoxColumn sMaCB;
-        private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Button btn_xoa;
-        private System.Windows.Forms.Button btn_fix;
-        private System.Windows.Forms.Button btn_find;
-        private System.Windows.Forms.Button btn_tiep;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thoi_gian;
     }
 }
