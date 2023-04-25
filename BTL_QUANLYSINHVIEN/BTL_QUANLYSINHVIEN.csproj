@@ -265,6 +265,12 @@
     <Compile Include="FormCRNganh.Designer.cs">
       <DependentUpon>FormCRNganh.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQLKhoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -498,6 +504,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRNganh.resx">
       <DependentUpon>FormCRNganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLKhoa.resx">
       <DependentUpon>FormQLKhoa.cs</DependentUpon>
@@ -782,6 +791,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\340849414_943752853333754_3568810528558309995_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hou.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fithou.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

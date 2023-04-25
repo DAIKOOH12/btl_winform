@@ -133,6 +133,26 @@ namespace BTL_QUANLYSINHVIEN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fithou {
+            get {
+                object obj = ResourceManager.GetObject("fithou", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hou {
+            get {
+                object obj = ResourceManager.GetObject("hou", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mattroithieuruihanhtinhjpg1resize_6c46e {
             get {
                 object obj = ResourceManager.GetObject("mattroithieuruihanhtinhjpg1resize_6c46e", resourceCulture);
