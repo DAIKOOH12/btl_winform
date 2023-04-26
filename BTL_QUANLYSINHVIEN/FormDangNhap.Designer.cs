@@ -33,10 +33,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.tb_matkhau = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lb_count = new System.Windows.Forms.Label();
             this.btn_dangnhap = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
             this.lb_noti = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_taikhoan
@@ -81,19 +82,18 @@
             this.tb_matkhau.TabIndex = 0;
             this.tb_matkhau.UseSystemPasswordChar = true;
             // 
-            // label3
+            // lb_count
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(499, 285);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Mật khẩu";
+            this.lb_count.AutoSize = true;
+            this.lb_count.Location = new System.Drawing.Point(514, 346);
+            this.lb_count.Name = "lb_count";
+            this.lb_count.Size = new System.Drawing.Size(0, 20);
+            this.lb_count.TabIndex = 3;
             // 
             // btn_dangnhap
             // 
             this.btn_dangnhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btn_dangnhap.Location = new System.Drawing.Point(493, 353);
+            this.btn_dangnhap.Location = new System.Drawing.Point(493, 405);
             this.btn_dangnhap.Name = "btn_dangnhap";
             this.btn_dangnhap.Size = new System.Drawing.Size(109, 45);
             this.btn_dangnhap.TabIndex = 4;
@@ -104,7 +104,7 @@
             // btn_thoat
             // 
             this.btn_thoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btn_thoat.Location = new System.Drawing.Point(659, 353);
+            this.btn_thoat.Location = new System.Drawing.Point(659, 405);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(109, 45);
             this.btn_thoat.TabIndex = 4;
@@ -115,20 +115,31 @@
             // 
             this.lb_noti.AutoSize = true;
             this.lb_noti.ForeColor = System.Drawing.Color.IndianRed;
-            this.lb_noti.Location = new System.Drawing.Point(499, 318);
+            this.lb_noti.Location = new System.Drawing.Point(514, 323);
             this.lb_noti.Name = "lb_noti";
-            this.lb_noti.Size = new System.Drawing.Size(0, 30);
+            this.lb_noti.Size = new System.Drawing.Size(0, 20);
             this.lb_noti.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(502, 285);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Mật khẩu";
             // 
             // FormDangNhap
             // 
+            this.AcceptButton = this.btn_dangnhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 605);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_dangnhap);
             this.Controls.Add(this.lb_noti);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lb_count);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -150,9 +161,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_matkhau;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lb_count;
         private System.Windows.Forms.Button btn_dangnhap;
         private System.Windows.Forms.Button btn_thoat;
         private System.Windows.Forms.Label lb_noti;
+        private System.Windows.Forms.Label label4;
     }
 }

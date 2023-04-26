@@ -72,7 +72,10 @@ create table tblLop(
 	sTenLop varchar(20),
 	sMaNganh varchar(20)
 )
-
+create table tblDangNhap(
+	sTaiKhoan varchar(10) not null primary key,
+	sMatKhau nvarchar(max),
+)
 -- Tao khoa chinh, khoa ngoai
 alter table tblSinhVien
 add foreign key (sMalop) references tblLop(sMaLop)
@@ -172,6 +175,9 @@ VALUES ('HD01', '12600000', 'SV1'),
 	   ('HD05', '11220000', 'SV5')
 select * from tblHoaDonHocPhi
 delete from tblHoaDonHocPhi
+
+insert into tblDangNhap values('Daikk','Daikoohee')
+select * from tblDangNhap
 
 INSERT INTO tblDiemChuan (sSoBD, sMaNganh, sKhoiToHop, fDiem1, fDiem2, fDiem3, fDiemUuTien)
 VALUES ('SV1','N2','A00', '8.0', '7.8', '8.2','0.25')
@@ -858,3 +864,22 @@ begin
 end
 
 exec sp_TTNganhTheoKhoa 'K1'
+
+alter table tblHoSoSinhVien
+drop column thoi_gian_van_chuyen
+
+create proc sp_selHSSV 
+as 
+begin
+	select *, datediff(d,dThoiGianGui,dThoiGianThu) as thoi_gian from tblHoSoSinhVien
+end
+
+alter table tblDangNhap
+alter column sTrangThai nvarchar(30)
+
+select * from tblDangNhap
+
+update tblDangNhap 
+set sTrangThai=N'Bình thường'
+
+drop table tblDangNhap
